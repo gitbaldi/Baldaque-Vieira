@@ -1,5 +1,19 @@
+
 :root{
-    --champagne:#C8B8A0;
-    --golden:#A88B5F;
-    --beige: #E1DBD0;
+
+  /* ---------- Cores ---------- */
+  --color-ink-soft:  #55504a;  /* texto secundário */
+  
+  --color-line:      #e3ddd0;  /* linhas e bordas */
+  --color-panel:     #f3efe7;  /* fundo das secções alternadas (bege claro) */
+  
+
+  --color-champagne: #c8b8a0;
+  --color-golden:    #a88b5f;  /* cor de destaque: botões, links, ícones */
+  --color-beige:     #e1dbd0;  /* fundo do header / texto claro sobre fundo escuro */
+
+  /* ---------- Fontes ---------- */
+  --font-heading: 'Playfair Display', Georgia, serif; /* títulos (h1-h4) */
+  --font-body:    'Inter', Arial, sans-serif;          /* texto normal */
+
 }

@@ -1,0 +1,644 @@
+@import url('variables.css');
+
+
+/* ---------- reset básico ---------- */
+
+.conteudo_pagina{
+  padding:30px;
+}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  
+  
+}
+
+img{max-width:100%;display:block;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+a{color:inherit;text-decoration:none;}
+
+
+/* ---------- header ---------- */
+.upper_sidebar{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background:var(--color-beige);
+  padding:0px;
+}
+.direita{
+  display: flex;
+  
+}
+.upper_sidebar img{
+  padding:20px;
+  height:40px;
+  margin-right:auto;
+}
+
+
+.direita p:last-child{
+  background:var(--color-champagne);
+  
+  margin-right:10px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+}
+.direita p{
+  padding: 15px;
+}
+
+
+/* ---------- hero ---------- */
+.conteudo{
+  padding-top: 200px;
+}
+.introducao{
+  position:relative;
+  overflow:hidden;
+  min-height:560px;
+  padding:40px;
+}
+.introducao img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:0;
+}
+.introducao::before{ 
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(100deg, rgba(20,18,15,.8) 0%, rgba(20,18,15,.5) 42%, rgba(20,18,15,0) 100%);
+  z-index:1;
+  pointer-events:none;
+}
+.introducao h2{
+  position:relative;
+  z-index:2;
+  color:white;
+  max-width:620px;
+  margin-bottom:20px;
+  
+}
+.introducao p{
+  position:relative;
+  z-index:2;
+  max-width:480px;
+  color:white;
+  margin-bottom:30px;
+}
+.introducao button{
+  position:relative;
+  z-index:2;
+  padding:14px 28px;
+  font-weight:600;
+
+  margin-right:16px;
+}
+.introducao button:first-of-type{background:var(--color-golden);color:white;}
+.introducao button:last-of-type{background:var(--color-champagne);border:1px solid var(--color-beige);color:var(--color-white);}
+
+/* fim do hero */
+
+
+/*mercados INICIO */
+.mercados{
+  display:grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: auto auto;
+    gap:20px
+}
+
+.mercados img{
+    /* remove ou substitui o max-width:300px que está a limitar tudo */
+    width: 100%;
+    height: 25vw;   /* ajusta a altura conforme a largura do ecrã */
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: filter .4s ease;
+}
+
+.corticeiro,
+.viti_alimentar{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.mercado_texto{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    color: white;
+    background: linear-gradient(180deg, rgba(20,18,15,0) 0%, rgba(20,18,15,.75) 100%);
+    transition: opacity .4s ease;
+}
+
+.mercado_texto h4{
+    margin: 0 0 8px;
+}
+
+.mercado_texto p{
+    margin: 0;
+}
+
+.mercado_hover{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .4s ease;
+}
+
+.mercado_hover span{
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.mercado_hover .seta{
+    display: inline-block;
+    transition: transform .4s ease;
+}
+
+.corticeiro:hover img,
+.viti_alimentar:hover img{
+    filter: blur(10px);
+}
+
+.corticeiro:hover .mercado_texto,
+.viti_alimentar:hover .mercado_texto{
+    opacity: 0;
+}
+
+.corticeiro:hover .mercado_hover,
+.viti_alimentar:hover .mercado_hover{
+    opacity: 1;
+}
+
+.corticeiro:hover .mercado_hover .seta,
+.viti_alimentar:hover .mercado_hover .seta{
+    transform: translateX(6px);
+}
+
+/* mercados FIM */
+
+/*about us*/
+.about_us{
+  text-align: center;
+}
+.about_us h2{
+  padding-top: 0px;
+  margin-top:0px;
+}
+.about_us h4{
+  padding-bottom: 0px;
+  margin-bottom:0px;
+  
+}
+.about_us > h4{
+  color: var(--color-golden);
+}
+.caixas{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;   /* faz todos os cards terem a mesma altura */
+    gap: 16px;
+    flex-wrap: nowrap;
+}
+
+.card {
+    flex:1;
+    min-width: 0;
+
+    display: grid;
+    grid-template-columns: 60px 1fr;
+     grid-template-rows: auto auto;
+     align-items: center;
+    gap: 12px;
+
+    padding: 18px;
+    border: 1px solid var(--border, #ccc);
+    border-radius: 8px;
+
+    align-items: start;
+}
+
+.card .material-symbols-outlined {
+    grid-column: 1;
+    grid-row: 1 / 3;
+
+    justify-self: center;
+    align-self: center;
+    font-size: 40px;
+    color: var(--color-golden);
+}
+
+.card h4 {
+    grid-column: 2;
+
+    margin: 0;
+    text-align: left;
+}
+
+.card p {
+    grid-column: 2;
+
+    margin: 0;
+    font-size: 14px;
+    text-align: left;
+    color: var(--text-secondary, #555);
+}
+
+
+/*about us FIM*/
+
+/* mais procurados */
+.equipamentos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.equipamentos h2 {
+    width: 100%;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+.equipamentos > .caixa {
+    flex: 1 1 250px;
+}
+
+.caixa {
+    border: 1px solid black;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-ink-soft);
+    box-sizing: border-box;
+}
+
+/* IMAGENS TODAS COM A MESMA ALTURA */
+.caixa img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    margin: 0 0 20px 0;
+}
+
+
+.caixa p {
+    margin: 0px;
+    color: var(--color-beige);
+}
+
+
+.caixa h4 {
+    margin-bottom: 5px;
+    margin-top: 10px;
+    min-height: 48px;
+    color: white;
+}
+
+/* botão */
+.caixa button {
+    margin-top: auto;
+    align-self: flex-start;
+    color: var(--color-ink-soft);
+    padding: 10px 14px;
+    background-color: var(--color-beige);
+}
+
+/* FIM mais procurados */
+
+/* LOCATION */
+  .location{
+    display: flex;
+  }
+
+ /* FIM location */
+/* =========================
+   LOCALIZAÇÃO
+   ========================= */
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 50px 10%;
+}
+
+.location .texto {
+    flex: 1;
+}
+
+.location .texto h2 {
+    margin-top: 0;
+}
+
+.location .texto p {
+    line-height: 1.5;
+}
+
+.location img {
+    flex: 1;
+    width: 50%;
+    height: 230px;
+    object-fit: cover;
+}
+
+
+/* =========================
+   ORÇAMENTO
+   ========================= */
+
+.orcamento {
+    display: grid;
+
+    grid-template-columns: 1fr 500px;
+
+    column-gap: 70px;
+
+    padding: 35px 10%;
+
+    background-color: var(--color-beige);
+
+    box-sizing: border-box;
+
+    /* MUITO IMPORTANTE */
+    align-content: start;
+
+    row-gap: 4px;
+}
+
+
+/* =========================
+   PARTE DA ESQUERDA
+   ========================= */
+
+.orcamento > p,
+.orcamento > h3,
+.orcamento > .phone,
+.orcamento > .email,
+.orcamento > .localizacao {
+    grid-column: 1;
+}
+
+
+/* FALE CONOSCO */
+
+.orcamento > p:first-child {
+    margin: 0 0 4px 0;
+
+    color: var(--color-golden);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+/* TÍTULO */
+
+.orcamento > h3 {
+    margin: 0 0 6px 0;
+
+    font-size: 26px;
+}
+
+
+/* DESCRIÇÃO */
+
+.orcamento > p:nth-child(3) {
+    margin: 0 0 10px 0;
+
+    line-height: 1.4;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   CONTACTOS
+   ========================= */
+
+.orcamento .phone,
+.orcamento .email,
+.orcamento .localizacao {
+    border-left: 2px solid var(--color-golden);
+
+    padding-left: 10px;
+
+    margin-bottom: 3px;
+}
+
+.orcamento .phone p,
+.orcamento .email p,
+.orcamento .localizacao p {
+    margin: 3px 0;
+}
+
+
+/* TELEFONE / EMAIL / OFICINA */
+
+.orcamento .phone p:first-child,
+.orcamento .email p:first-child,
+.orcamento .localizacao p:first-child {
+    color: var(--color-golden);
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   FORMULÁRIO
+   ========================= */
+
+.orcamento form {
+    grid-column: 2;
+
+    grid-row: 1 / 7;
+
+    width: 500px;
+
+    background-color: white;
+
+    padding: 18px;
+
+    box-sizing: border-box;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+/* INPUTS */
+
+.orcamento form input[type="text"],
+.orcamento form input[type="email"],
+.orcamento form input[type="tel"],
+.orcamento form textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 6px;
+
+    border: 1px solid #ccc;
+
+    font-family: inherit;
+
+    font-size: 12px;
+}
+
+
+/* TEXTAREA */
+
+.orcamento form textarea {
+    height: 60px;
+
+    resize: vertical;
+}
+
+
+/* RADIO */
+
+.orcamento form input[type="radio"] {
+    margin-left: 5px;
+}
+
+
+/* BOTÃO */
+
+.orcamento form input[type="submit"] {
+    margin-top: 4px;
+
+    padding: 9px;
+
+    border: none;
+
+    background-color: var(--color-golden);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 11px;
+}
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 60px;
+
+    padding: 50px 10%;
+
+    background-color: #111;
+
+    color: white;
+}
+
+
+/* =========================
+   LOGO + TEXTO
+   ========================= */
+
+.footer_inicio {
+    width: 250px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_inicio img {
+    width: 80px;
+
+    height: auto;
+
+    padding: 0;
+
+    margin-bottom: 12px;
+}
+
+.footer_inicio p {
+    margin: 0;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   EMPRESA / SERVIÇOS /
+   CONTACTOS
+   ========================= */
+
+   footer .empresa {
+    margin-left: auto;
+}
+footer .empresa,
+footer .servicos,
+footer .CONTACTOS {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    font-size: 10px;
+}
+
+
+/* TÍTULOS */
+
+footer .empresa a:first-child,
+footer .servicos a:first-child {
+    color: var(--color-golden);
+}
+
+
+/* CONTACTOS */
+
+footer .CONTACTOS p {
+    margin: 0;
+
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+
+
