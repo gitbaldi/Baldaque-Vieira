@@ -74,19 +74,19 @@
     <div class="equipamentos">
         <h2> Equipamentos mais Procurados</h2>
         <div class = caixa>
-            <img src="../OneDrive_2026-06-23/Site - BeV/Fotos Site/BOA_IMG_0997.jpg">
+            <img src="../Selecao_MLB300K/Selecao_MLB300K/capa_centrada.jpeg">
             <p> Corticeiro</p>
             <h4> Máquina de lavar, branquear e pré-secar rolhas e discos de cortiça</h4>
             <button> MAIS INFO</button>
         </div>
         <div class = caixa>
-            <img src="../OneDrive_2026-06-23/Site - BeV/Fotos Site/BOA_IMG_0997.jpg">
+            <img src="../Selecao_MDG2/Selecao_MDG2/Capa2.JPG">
             <p> Corticeiro</p>
             <h4> Máquina de Desinfeção de Granulado de Cortiça</h4>
             <button> MAIS INFO</button>
         </div>
         <div class = caixa>
-            <img src="../OneDrive_2026-06-23/Site - BeV/Fotos Site/BOA_IMG_0997.jpg">
+            <img src="../Selecao_CD/Selecao_CD/tentativa2.png">
             <p> Corticeiro</p>
             <h4> Câmara de Desinfeção de Cortiça</h4>
             <button> MAIS INFO</button>
