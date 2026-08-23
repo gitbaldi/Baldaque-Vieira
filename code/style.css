@@ -363,24 +363,16 @@ a{color:inherit;text-decoration:none;}
 /* =========================
    ORÇAMENTO
    ========================= */
-
+.esquerda >p:first-child{
+    color: var(--color-golden)
+}
 .orcamento {
-    display: grid;
-
-    grid-template-columns: 1fr 500px;
-
-    column-gap: 70px;
-
-    padding: 35px 10%;
-
+    display: flex;
+    justify-content: space-between;
     background-color: var(--color-beige);
-
-    box-sizing: border-box;
-
-    /* MUITO IMPORTANTE */
-    align-content: start;
-
-    row-gap: 4px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 20px;
 }
 
 
@@ -388,67 +380,15 @@ a{color:inherit;text-decoration:none;}
    PARTE DA ESQUERDA
    ========================= */
 
-.orcamento > p,
-.orcamento > h3,
-.orcamento > .phone,
-.orcamento > .email,
-.orcamento > .localizacao {
-    grid-column: 1;
-}
-
-
-/* FALE CONOSCO */
-
-.orcamento > p:first-child {
-    margin: 0 0 4px 0;
-
-    color: var(--color-golden);
-
-    font-size: 9px;
-
-    letter-spacing: 2px;
-}
-
-
-/* TÍTULO */
-
-.orcamento > h3 {
-    margin: 0 0 6px 0;
-
-    font-size: 26px;
-}
-
-
-/* DESCRIÇÃO */
-
-.orcamento > p:nth-child(3) {
-    margin: 0 0 10px 0;
-
-    line-height: 1.4;
-
-    font-size: 13px;
-}
-
-
-/* =========================
-   CONTACTOS
-   ========================= */
-
 .orcamento .phone,
 .orcamento .email,
 .orcamento .localizacao {
     border-left: 2px solid var(--color-golden);
-
     padding-left: 10px;
-
     margin-bottom: 3px;
 }
 
-.orcamento .phone p,
-.orcamento .email p,
-.orcamento .localizacao p {
-    margin: 3px 0;
-}
+
 
 
 /* TELEFONE / EMAIL / OFICINA */
@@ -457,37 +397,49 @@ a{color:inherit;text-decoration:none;}
 .orcamento .email p:first-child,
 .orcamento .localizacao p:first-child {
     color: var(--color-golden);
-
-    font-size: 8px;
-
-    letter-spacing: 1px;
+    margin:5px;
+    font-size: 10px;
+    
 }
+.orcamento .phone p:nth-child(2),
+.orcamento .email p:nth-child(2),
+.orcamento .localizacao p:nth-child(2) {
+    margin: 0px;
+    font-size: 17px;
+    
+}
+
 
 
 /* =========================
    FORMULÁRIO
    ========================= */
 
-.orcamento form {
-    grid-column: 2;
-
-    grid-row: 1 / 7;
-
-    width: 500px;
-
-    background-color: white;
-
-    padding: 18px;
-
-    box-sizing: border-box;
-
-    border-radius: 5px;
-
+.linha{
     display: flex;
+    gap: 15px;
+    padding: 5px;
+}
+.setor {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 
-    flex-direction: column;
+.setor label {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
-    gap: 4px;
+.setor input {
+  display: none;
+}
+
+.setor label:has(input:checked) {
+  background: var(--color-champagne);
+  
 }
 
 

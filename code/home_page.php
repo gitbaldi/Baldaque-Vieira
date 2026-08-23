@@ -103,9 +103,11 @@
         <img src="../mapa_temp.png" alt="localizacao">
     </div>
     <div class ="orcamento">
+        <div class= esquerda>
         <p> FALE CONOSCO</p>
         <h3> Peça o seu Orçamento</h3>
         <p> Descreva o equipamento ou serviço do qual quer receber mais informações<br>Responderemos o mais brevemente possível</p>
+        <div class = "infos">
         <div class="phone">
             <p>TELEFONE</p>
             <p>22 099 1303</p>
@@ -118,19 +120,35 @@
             <p>OFICINA</p>
             <p>Zona Industrial - Santa Maria da Feira</p>
         </div>
+</div>
+</div>
+<div class = "direita">
         <form>
-            <!-- FALTA TER VALIDAÇÃO-->
-            NOME <input name="nome" type="text" placeholder="O seu nome">
-            EMPRESA <input name="time" type="text" placeholder="Nome da Empresa">
-            EMAIL <input name="email" type="email" placeholder="nome@empresa.pt">
-            TELEFONE <input name="telephone" type="tel" placeholder="+351..."> <!--nao necessariamente portugues-->  
-            SETOR <input type="radio" name="setor" value="corticeira" >CORTICEIRA
-            <input type="radio" name="setor" value="vitivinicula">VITIVINÍCULA
-            <input type="radio" name="setor" value="alimentar">ALIMENTAR
-            <input type="radio" name="setor" value="outra">OUTRA
-            MENSAGEM <textarea name="mensagem" rows="5" cols="60"></textarea>
+            <div class = "linha"> 
+            <div class= "campo">NOME <input name="nome" type="text" placeholder="O seu nome"></div>
+            <div class= "campo">EMPRESA <input name="time" type="text" placeholder="Nome da Empresa"></div>
+            </div>
+            <div class = "linha"> 
+            <div class= "campo">EMAIL <input name="email" type="email" placeholder="nome@empresa.pt"></div>
+            <div class= "campo">TELEFONE <input name="telephone" type="tel" placeholder="+351..."> </div> 
+            </div>
+            <div class="linha">
+  <div class="campo">
+    SETOR
+    <div class="setor">
+      <label><input type="radio" name="setor" value="corticeira"><span>CORTICEIRA</span></label>
+      <label><input type="radio" name="setor" value="vitivinicula"><span>VITIVINÍCOLA</span></label>
+      <label><input type="radio" name="setor" value="alimentar"><span>ALIMENTAR</span></label>
+      <label><input type="radio" name="setor" value="outra"><span>OUTRA</span></label>
+    </div>
+  </div>
+</div>
+        <div class = "linha"> 
+            <div class= "campo">MENSAGEM <textarea name="mensagem" rows="5" cols="60"></textarea>
+</div></div>            
             <input type="submit" value="ENVIAR PEDIDO">
         </form>
+</div>
         </main>
         <footer>
               <div class="footer_inicio">
