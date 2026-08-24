@@ -12,11 +12,11 @@
     </div>
     <main class="conteudo_pagina"> 
     <div class ="mercado_alvo">
-        <h3> Mercado Alvo </h3>
-        Desenvolvemos soluções personalizadas e adaptadas com forte presença no mercado nacional e comunitário, nomeadamente em Espanha e França.
+        <h1> Mercado Alvo </h1>
+        <p>Desenvolvemos soluções personalizadas e adaptadas com forte presença no mercado nacional e comunitário, nomeadamente em Espanha e França.<p>
         <div class="mercados">
             <a class ="corticeiro" href="corticeiro.html">
-                <img src="../OneDrive_2026-06-23/Site - BeV/Fotos Site/BOA_IMG_4511.jpg" alt="imagem_corticeiro">
+                <img src="../IMG_0817.jpg" alt="imagem_corticeiro">
                 <div class="mercado_texto">
                     <h4>CORTICEIRO</h4>
                     <p>Soluções industriais para o processamento e transformação da cortiça </p>
@@ -26,7 +26,7 @@
                 </div>
             </a>
             <a class ="viti_alimentar" href="viti_ali.html">
-                <img src="../OneDrive_2026-06-23/Site - BeV/Fotos Site/BOA_IMG_4511.jpg" alt="imagem_vitivinicula">
+                <img src="../IMG_2143_viti.jpg" alt="imagem_vitivinicula">
                 <div class="mercado_texto">
                     <h4>VITIVINÍCULA & ALIMENTAR</h4>
                     <p>Personalização de máquinas ????? </p>
@@ -72,27 +72,33 @@
         </div>
     </div>
     <div class="equipamentos">
-        <h2> Equipamentos mais Procurados</h2>
-        <div class = caixa>
-            <img src="../Selecao_MLB300K/Selecao_MLB300K/capa_centrada.jpeg">
-            <p> Corticeiro</p>
-            <h4> Máquina de lavar, branquear e pré-secar rolhas e discos de cortiça</h4>
-            <button> MAIS INFO</button>
-        </div>
-        <div class = caixa>
-            <img src="../Selecao_MDG2/Selecao_MDG2/Capa2.JPG">
-            <p> Corticeiro</p>
-            <h4> Máquina de Desinfeção de Granulado de Cortiça</h4>
-            <button> MAIS INFO</button>
-        </div>
-        <div class = caixa>
-            <img src="../Selecao_CD/Selecao_CD/tentativa2.png">
-            <p> Corticeiro</p>
-            <h4> Câmara de Desinfeção de Cortiça</h4>
-            <button> MAIS INFO</button>
-        </div>
+  <h1>PRODUTOS </h1>
 
+  <a href="maquina-mlb300k.html" class="caixa">
+    <img src="../fotos_organizadas/Selecao_MLB300K/Selecao_MLB300K/capa_centrada.jpeg" alt="Máquina de lavar, branquear e pré-secar rolhas e discos de cortiça">
+    <div class="caixa_overlay">
+      <p>Corticeiro</p>
+      <h4>Máquina de lavar, branquear e pré-secar rolhas e discos de cortiça</h4>
     </div>
+  </a>
+
+  <a href="maquina-mdg2.html" class="caixa">
+    <img src="../fotos_organizadas/Selecao_MDG2/Selecao_MDG2/Capa2.JPG" alt="Máquina de Desinfeção de Granulado de Cortiça">
+    <div class="caixa_overlay">
+      <p>Corticeiro</p>
+      <h4>Máquina de Desinfeção de Granulado de Cortiça</h4>
+    </div>
+  </a>
+
+  <a href="maquina-cd.html" class="caixa">
+    <img src="../fotos_organizadas/Selecao_CD/Selecao_CD/tentativa2.png" alt="Câmara de Desinfeção de Cortiça">
+    <div class="caixa_overlay">
+      <p>Corticeiro</p>
+      <h4>Câmara de Desinfeção de Cortiça</h4>
+    </div>
+  </a>
+
+</div>
 
     <div class = "location">
         <div class = "texto">
@@ -104,7 +110,7 @@
     </div>
     <div class ="orcamento">
         <div class= esquerda>
-        <p> FALE CONOSCO</p>
+        <p> --- FALE CONOSCO</p>
         <h3> Peça o seu Orçamento</h3>
         <p> Descreva o equipamento ou serviço do qual quer receber mais informações<br>Responderemos o mais brevemente possível</p>
         <div class = "infos">
@@ -122,7 +128,7 @@
         </div>
 </div>
 </div>
-<div class = "direita">
+
         <form>
             <div class = "linha"> 
             <div class= "campo">NOME <input name="nome" type="text" placeholder="O seu nome"></div>
@@ -144,11 +150,11 @@
   </div>
 </div>
         <div class = "linha"> 
-            <div class= "campo">MENSAGEM <textarea name="mensagem" rows="5" cols="60"></textarea>
+            <div class= "campo">MENSAGEM <textarea name="mensagem" rows="5" cols="60" placeholder="Descreva o equipamento ou o serviço pretendido"></textarea>
 </div></div>            
             <input type="submit" value="ENVIAR PEDIDO">
         </form>
-</div>
+
         </main>
         <footer>
               <div class="footer_inicio">
@@ -157,25 +163,48 @@
             <p> Construção e manutenção de máquinas em aço inoxidável para a indústria corticeira, vitivinícula e alimentar</p>
             
         </div>
+        <div class="footer_fim">
         <div class = "empresa">
-                <a href="empresa.php">EMPRESA</a>
+                <span>EMPRESA</span>
                 <a href="about_us.php">Sobre nós</a>
                 <a href="about_us.php">Certificações</a>
                 <a href="about_us.php">Projetos</a>
             </div>
             <div class = "servicos">
-                <a href="empresa.php">SERVIÇOS</a>
+                <span>SERVIÇOS</span>
                 <a href="about_us.php">Construção</a>
                 <a href="about_us.php">Manutenção</a>
                 <a href="about_us.php">Soldadura INOX</a>
                 <a href="about_us.php">Assistência</a>
             </div>
-            <div class = "CONTACTOS">
+            <div class = "contactos">
+                <span>CONTACTOS</span>
                 <p> R. 2 Urbanização Portela 39, 4535-516 Santa Maria da Feira <br> Portugal</p>
                 <p> +351 220 991 303</p>
                 <p> geral@baldaque-e-vieira.pt</p>
             </div>
+            </div>
         </footer>
     </div>
+     <script>
+    const sidebar = document.querySelector('.upper_sidebar');
+const hero = document.querySelector('.introducao');
+const logo = document.querySelector('.upper_sidebar img');
+
+const logoNormal = '../BeV_logo_preto.png';
+const logoScrolled = '../BeV_logo_branco_incompleto.png'; // ou a versão que quiseres mostrar
+
+window.addEventListener('scroll', () => {
+  const heroHeight = hero.offsetHeight;
+
+  if (window.scrollY > heroHeight) {
+    sidebar.classList.add('scrolled');
+    logo.src = logoScrolled;
+  } else {
+    sidebar.classList.remove('scrolled');
+    logo.src = logoNormal;
+  }
+});
+  </script>
   </body>
 </html>

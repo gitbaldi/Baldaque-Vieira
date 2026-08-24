@@ -2,10 +2,11 @@
     <div class="upper_sidebar">
         <a href="home_page.php"><img src="../BeV_logo_preto.png"alt="logo_preto"></a>
         <div class="direita">
-            <p> INICIO </p>
-            <p> EMPRESA </p>
-            <p> PRODUTOS </p>
-            <p> CONTACTOS </p>
-            <p> PEDIR ORÇAMENTO </p>
+            <a href="home_page.php"> INICIO </a>
+            <a href="empresa.php"> EMPRESA </a>
+            <a href="produtos.php"> PRODUTOS </a>
+            <a href="contactos.php"> CONTACTOS </a>
+            <a href="orcamento.php"> ORÇAMENTO </a>
+            
         </div>
     </div>

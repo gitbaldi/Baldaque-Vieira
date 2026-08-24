@@ -2,9 +2,12 @@
 
 
 /* ---------- reset básico ---------- */
-
+html, body {
+  overflow-x: hidden;
+}
 .conteudo_pagina{
-  padding:30px;
+  padding:30px 30px 0 30px;
+  background-color: var(--color-panel);
 }
 body{
   margin:0;
@@ -25,6 +28,19 @@ a{color:inherit;text-decoration:none;}
   align-items: center;
   background:var(--color-beige);
   padding:0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+    transition: background-color 0.3s ease;
+}
+.upper_sidebar.scrolled{
+  background-color: black;
+  color: white;
+}
+.upper_sidebar.scrolled .direita a:nth-child(5){
+    color:#111 ;
 }
 .direita{
   display: flex;
@@ -37,14 +53,14 @@ a{color:inherit;text-decoration:none;}
 }
 
 
-.direita p:last-child{
+.direita a:last-child{
   background:var(--color-champagne);
   
   margin-right:10px;
   padding-bottom: 5px;
   border-radius: 5px;
 }
-.direita p{
+.direita a{
   padding: 15px;
 }
 
@@ -105,6 +121,27 @@ a{color:inherit;text-decoration:none;}
 
 
 /*mercados INICIO */
+.mercado_alvo{
+    background-color: black;
+    width: calc(100% + 60px);
+    margin-left: -30px;
+    margin-right: -30px;
+    margin-top:-30px;
+    padding: 40px 30px 60px 30px;
+    box-sizing: border-box;
+    color:white;
+}
+.mercado_alvo h1 {
+    text-align: center;
+    margin-bottom: 0px;
+    
+}
+.mercado_alvo > p {
+    text-align: center;
+    color: var(--color-beige);
+    margin-top:7px;
+}
+
 .mercados{
   display:grid;
     grid-template-columns: 2.5fr 1fr;
@@ -196,6 +233,13 @@ a{color:inherit;text-decoration:none;}
 /*about us*/
 .about_us{
   text-align: center;
+  background-color: var(--color-beige);
+  padding: 20px;
+  padding-bottom: 50px;
+  width: calc(100% + 60px);
+  margin-left: -30px;
+  margin-right: -30px;
+  box-sizing: border-box;
 }
 .about_us h2{
   padding-top: 0px;
@@ -268,12 +312,20 @@ a{color:inherit;text-decoration:none;}
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    background-color: black;
+    width: calc(100% + 60px);
+    margin-left: -30px;
+    margin-right: -30px;
+    padding: 60px 30px;
+    box-sizing: border-box;
 }
 
-.equipamentos h2 {
+.equipamentos h1 {
     width: 100%;
     margin-top: 18px;
-    margin-bottom: 8px;
+    margin-bottom: 35px;
+    color: white;
+    text-align: center;
 }
 
 .equipamentos > .caixa {
@@ -281,44 +333,64 @@ a{color:inherit;text-decoration:none;}
 }
 
 .caixa {
-    border: 1px solid black;
-    padding: 15px;
-
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color-ink-soft);
+    position: relative;
+    display: block;
+    overflow: hidden;
     box-sizing: border-box;
 }
 
-/* IMAGENS TODAS COM A MESMA ALTURA */
 .caixa img {
     width: 100%;
     height: 350px;
     object-fit: cover;
-    margin: 0 0 20px 0;
+    display: block;
+    margin: 0;
 }
 
-
-.caixa p {
-    margin: 0px;
-    color: var(--color-beige);
+/* overlay vermelho, visível por padrão */
+.caixa::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: color-mix(in srgb, var(--color-champagne) 85%, transparent);
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
 }
 
+.caixa:hover::after {
+    opacity: 0;
+}
 
-.caixa h4 {
-    margin-bottom: 5px;
-    margin-top: 10px;
-    min-height: 48px;
+/* texto centrado, por cima do vermelho, visível por padrão */
+.caixa_overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    transition: opacity 0.3s ease;
+}
+
+.caixa:hover .caixa_overlay {
+    opacity: 0;
+}
+
+.caixa_overlay p {
+    margin: 0;
     color: white;
+    font-size: 13px;
 }
 
-/* botão */
-.caixa button {
-    margin-top: auto;
-    align-self: flex-start;
-    color: var(--color-ink-soft);
-    padding: 10px 14px;
-    background-color: var(--color-beige);
+.caixa_overlay h4 {
+    margin: 5px 0 0;
+    color: black;
 }
 
 /* FIM mais procurados */
@@ -370,9 +442,11 @@ a{color:inherit;text-decoration:none;}
     display: flex;
     justify-content: space-between;
     background-color: var(--color-beige);
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    padding: 20px;
+    width: calc(100% + 60px);   /* 60px = 30px de cada lado do .conteudo_pagina */
+    margin-left: -30px;
+    margin-right: -30px;
+    padding: 20px 30px;         /* repõe o espaçamento interno visual */
+    box-sizing: border-box;
 }
 
 
@@ -442,7 +516,12 @@ a{color:inherit;text-decoration:none;}
   
 }
 
-
+.orcamento form{
+    border: 1px solid var(--color-champagne);
+    border-radius: 10px;
+    background-color: var(--color-panel);
+    padding: 20px;
+}
 /* INPUTS */
 
 .orcamento form input[type="text"],
@@ -506,24 +585,29 @@ footer {
 
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
+    gap: 300px;
 
-    gap: 60px;
-
-    padding: 50px 10%;
+    padding: 50px 40px 40px 40px;
 
     background-color: #111;
 
     color: white;
 }
 
-
+.footer_fim{
+    display: grid;
+     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.5fr);
+    gap: 40px;
+    flex: 1;
+}
 /* =========================
    LOGO + TEXTO
    ========================= */
 
 .footer_inicio {
     width: 250px;
-
+    font-size: small;
     display: flex;
     flex-direction: column;
 }
@@ -538,13 +622,7 @@ footer {
     margin-bottom: 12px;
 }
 
-.footer_inicio p {
-    margin: 0;
 
-    font-size: 10px;
-
-    line-height: 1.5;
-}
 
 
 /* =========================
@@ -552,9 +630,7 @@ footer {
    CONTACTOS
    ========================= */
 
-   footer .empresa {
-    margin-left: auto;
-}
+ 
 footer .empresa,
 footer .servicos,
 footer .CONTACTOS {
@@ -564,25 +640,18 @@ footer .CONTACTOS {
 
     gap: 8px;
 
-    font-size: 10px;
+    
 }
 
 
 /* TÍTULOS */
 
-footer .empresa a:first-child,
-footer .servicos a:first-child {
+footer span {
     color: var(--color-golden);
 }
 
 
-/* CONTACTOS */
 
-footer .CONTACTOS p {
-    margin: 0;
-
-    line-height: 1.5;
-}
 
 
 
