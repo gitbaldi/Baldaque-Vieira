@@ -13,7 +13,8 @@
   --color-beige:     #e1dbd0;  /* fundo do header / texto claro sobre fundo escuro */
 
   /* ---------- Fontes ---------- */
-  --font-heading: 'Playfair Display', Georgia, serif; /* títulos (h1-h4) */
+  --font-brand: 'Cormorant Garamond', Georgia, serif; /* títulos (h1-h4) */
+  --font-header: Manrope, Arial, Helvetica, sans-serif;
   --font-body:    'Inter', Arial, sans-serif;          /* texto normal */
 
 }

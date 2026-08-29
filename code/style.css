@@ -1,19 +1,35 @@
 @import url('variables.css');
 
+/* ---------- sistema de espaçamento ----------
+   usa 3 valores consistentes em toda a página:
+   --space-s  : espaçamento pequeno (dentro de componentes)
+   --space-m  : espaçamento médio (entre elementos de uma secção)
+   --space-l  : espaçamento grande (entre secções)
+-------------------------------------------------- */
+:root{
+  --space-s: 24px;
+  --space-m: 48px;
+  --space-l: 80px;
+  --space-xl:100px;
+}
 
 /* ---------- reset básico ---------- */
 html, body {
   overflow-x: hidden;
 }
+
+h1,h2{
+    font-family: var(--font-header);
+    font-weight: lighter;
+    letter-spacing: 3px;
+}
 .conteudo_pagina{
-  padding:30px 30px 0 30px;
+  padding: var(--space-m) 30px 0 30px;
   background-color: var(--color-panel);
 }
 body{
   margin:0;
   font-family:var(--font-body);
-  
-  
 }
 
 img{max-width:100%;display:block;}
@@ -22,7 +38,7 @@ a{color:inherit;text-decoration:none;}
 
 
 /* ---------- header ---------- */
-.upper_sidebar{
+nav{
   display:flex;
   justify-content: space-between;
   align-items: center;
@@ -33,20 +49,20 @@ a{color:inherit;text-decoration:none;}
   left: 0;
   width: 100%;
   z-index: 100;
-    transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
-.upper_sidebar.scrolled{
+nav.scrolled{
   background-color: black;
   color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,.15);
 }
-.upper_sidebar.scrolled .direita a:nth-child(5){
-    color:#111 ;
+nav.scrolled .direita a:nth-child(5){
+    color:#111;
 }
 .direita{
   display: flex;
-  
 }
-.upper_sidebar img{
+nav img{
   padding:20px;
   height:40px;
   margin-right:auto;
@@ -55,7 +71,6 @@ a{color:inherit;text-decoration:none;}
 
 .direita a:last-child{
   background:var(--color-champagne);
-  
   margin-right:10px;
   padding-bottom: 5px;
   border-radius: 5px;
@@ -95,23 +110,37 @@ a{color:inherit;text-decoration:none;}
   position:relative;
   z-index:2;
   color:white;
-  max-width:620px;
-  margin-bottom:20px;
-  
+  max-width:720px;
+  padding-bottom: 8px;
+  font-family: var(--font-brand);
+  font-weight:900;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
+
+.introducao h2::after{
+    content: "";
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--color-golden) ;
+}
+
 .introducao p{
   position:relative;
   z-index:2;
   max-width:480px;
   color:white;
-  margin-bottom:30px;
+  margin-top: 0px;
+  margin-bottom: var(--space-m);
+  line-height: 1.6;
 }
 .introducao button{
   position:relative;
   z-index:2;
   padding:14px 28px;
   font-weight:600;
-
   margin-right:16px;
 }
 .introducao button:first-of-type{background:var(--color-golden);color:white;}
@@ -126,33 +155,44 @@ a{color:inherit;text-decoration:none;}
     width: calc(100% + 60px);
     margin-left: -30px;
     margin-right: -30px;
-    margin-top:-30px;
-    padding: 40px 30px 60px 30px;
+    margin-top: calc(-1 * var(--space-m));
+    padding: var(--space-l) 30px;
     box-sizing: border-box;
     color:white;
 }
 .mercado_alvo h1 {
-    text-align: center;
+    position: relative;
+    width: 100%;
+    text-align: right;
     margin-bottom: 0px;
-    
+    padding-bottom: 10px;
+}
+.mercado_alvo h1::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 56px;
+    height: 3px;
+    background: var(--color-golden);
 }
 .mercado_alvo > p {
-    text-align: center;
+    max-width: 620px;
+    text-align: right;
     color: var(--color-beige);
-    margin-top:7px;
+    margin: 10px 0 var(--space-m) auto;
 }
 
 .mercados{
   display:grid;
-    grid-template-columns: 2.5fr 1fr;
-    grid-template-rows: auto auto;
-    gap:20px
+  grid-template-columns: 2.5fr 1fr;
+  grid-template-rows: auto auto;
+  gap: var(--space-s);
 }
 
 .mercados img{
-    /* remove ou substitui o max-width:300px que está a limitar tudo */
     width: 100%;
-    height: 25vw;   /* ajusta a altura conforme a largura do ecrã */
+    height: 25vw;
     max-height: 400px;
     object-fit: cover;
     border-radius: 10px;
@@ -172,18 +212,39 @@ a{color:inherit;text-decoration:none;}
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 20px;
+    padding: var(--space-s);
     color: white;
-    background: linear-gradient(180deg, rgba(20,18,15,0) 0%, rgba(20,18,15,.75) 100%);
+    background: linear-gradient(180deg, rgba(20,18,15,0) 0%, rgba(20,18,15,.85) 100%);
     transition: opacity .4s ease;
 }
 
 .mercado_texto h4{
+    position: relative;
+    display: inline-block;
     margin: 0 0 8px;
+    padding-bottom: 5px;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px black;
+    
+}
+.mercado_texto h4::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 44px;
+    height: 3px;
+    background: var(--color-golden);
 }
 
 .mercado_texto p{
     margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 380px;
+    text-shadow: 0 1px 6px rgba(0,0,0,.5);
 }
 
 .mercado_hover{
@@ -234,30 +295,47 @@ a{color:inherit;text-decoration:none;}
 .about_us{
   text-align: center;
   background-color: var(--color-beige);
-  padding: 20px;
-  padding-bottom: 50px;
+  padding: var(--space-xl) 20px;
   width: calc(100% + 60px);
   margin-left: -30px;
   margin-right: -30px;
   box-sizing: border-box;
 }
-.about_us h2{
+.about_us h1{
   padding-top: 0px;
-  margin-top:0px;
+  margin-top: 0px;
+  margin-bottom: var(--space-m);
+  position: relative;
+padding-bottom: 12px;
+
+
+}
+
+.about_us h1::after{
+     content: "";
+    position: absolute;   /* sai do fluxo normal, não empurra mais nada */
+    
+    left: 50%;
+     transform: translateX(-50%);
+    bottom: 0;             /* cola-se ao fundo do texto */
+    width: 44px;           /* aqui é que controlo o "mini" — só uma fatia da largura */
+    height: 2px;           /* fininho, para parecer uma linha e não uma barra */
+    background: var(--color-golden);
+    
 }
 .about_us h4{
   padding-bottom: 0px;
   margin-bottom:0px;
-  
 }
 .about_us > h4{
   color: var(--color-golden);
+  margin-bottom: 10px;
 }
 .caixas{
     display: flex;
     justify-content: center;
-    align-items: stretch;   /* faz todos os cards terem a mesma altura */
-    gap: 16px;
+    align-items: stretch;
+    gap: var(--space-s);
     flex-wrap: nowrap;
 }
 
@@ -267,15 +345,13 @@ a{color:inherit;text-decoration:none;}
 
     display: grid;
     grid-template-columns: 60px 1fr;
-     grid-template-rows: auto auto;
-     align-items: center;
-    gap: 12px;
+    grid-template-rows: auto auto;
+    align-items: start;
+    gap: 8px 16px;
 
-    padding: 18px;
+    padding: var(--space-s);
     border: 1px solid var(--border, #ccc);
     border-radius: 8px;
-
-    align-items: start;
 }
 
 .card .material-symbols-outlined {
@@ -290,16 +366,16 @@ a{color:inherit;text-decoration:none;}
 
 .card h4 {
     grid-column: 2;
-
     margin: 0;
     text-align: left;
+    line-height: 1.35;
 }
 
 .card p {
     grid-column: 2;
-
     margin: 0;
     font-size: 14px;
+    line-height: 1.5;
     text-align: left;
     color: var(--text-secondary, #555);
 }
@@ -311,21 +387,33 @@ a{color:inherit;text-decoration:none;}
 .equipamentos {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: var(--space-s);
     background-color: black;
     width: calc(100% + 60px);
     margin-left: -30px;
     margin-right: -30px;
-    padding: 60px 30px;
+    padding: var(--space-l) 30px;
     box-sizing: border-box;
 }
 
 .equipamentos h1 {
+    position: relative;
     width: 100%;
-    margin-top: 18px;
-    margin-bottom: 35px;
+    margin-top: 0;
+    margin-bottom: var(--space-m);
+    padding-bottom: 16px;
     color: white;
     text-align: center;
+}
+.equipamentos h1::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 56px;
+    height: 3px;
+    background: var(--color-golden);
 }
 
 .equipamentos > .caixa {
@@ -337,6 +425,7 @@ a{color:inherit;text-decoration:none;}
     display: block;
     overflow: hidden;
     box-sizing: border-box;
+    border-radius: 8px;
 }
 
 .caixa img {
@@ -367,13 +456,14 @@ a{color:inherit;text-decoration:none;}
     position: absolute;
     inset: 0;
     z-index: 2;
-    padding: 15px;
+    padding: var(--space-s);
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    gap: 8px;
 
     transition: opacity 0.3s ease;
 }
@@ -389,18 +479,13 @@ a{color:inherit;text-decoration:none;}
 }
 
 .caixa_overlay h4 {
-    margin: 5px 0 0;
+    margin: 0;
     color: black;
+    line-height: 1.4;
 }
 
 /* FIM mais procurados */
 
-/* LOCATION */
-  .location{
-    display: flex;
-  }
-
- /* FIM location */
 /* =========================
    LOCALIZAÇÃO
    ========================= */
@@ -408,27 +493,68 @@ a{color:inherit;text-decoration:none;}
 .location {
     display: flex;
     align-items: center;
-    gap: 40px;
-    padding: 50px 10%;
+    gap: var(--space-m);
+    padding: var(--space-l) 10%;
 }
 
 .location .texto {
     flex: 1;
 }
 
-.location .texto h2 {
+.location .texto h1 {
     margin-top: 0;
+    margin-bottom: var(--space-s);
 }
 
 .location .texto p {
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
-.location img {
+.location .mapa {
     flex: 1;
     width: 50%;
-    height: 230px;
-    object-fit: cover;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.location .mapa iframe{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+/* consentimento do mapa (evita carregar cookies da Google sem autorização) */
+.mapa-consent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+    padding: var(--space-s);
+    box-sizing: border-box;
+    background-color: var(--color-beige);
+}
+
+.mapa-consent p{
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    max-width: 320px;
+    color: var(--text-secondary, #555);
+}
+
+.mapa-consent button{
+    padding: 10px 22px;
+    border-radius: 4px;
+    background-color: var(--color-golden);
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
 }
 
 
@@ -436,34 +562,59 @@ a{color:inherit;text-decoration:none;}
    ORÇAMENTO
    ========================= */
 .esquerda >p:first-child{
-    color: var(--color-golden)
+    color: var(--color-golden);
+    letter-spacing: 0.5px;
+}
+.esquerda p.linha-topo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.esquerda p.linha-topo::before{
+    content: "";
+    width: 30px;
+    height: 1.5px;
+    background: var(--color-golden);
 }
 .orcamento {
     display: flex;
     justify-content: space-between;
+    gap: var(--space-m);
     background-color: var(--color-beige);
-    width: calc(100% + 60px);   /* 60px = 30px de cada lado do .conteudo_pagina */
+    width: calc(100% + 60px);
     margin-left: -30px;
     margin-right: -30px;
-    padding: 20px 30px;         /* repõe o espaçamento interno visual */
+    padding: var(--space-l) 30px;
     box-sizing: border-box;
 }
 
+.orcamento .esquerda h3{
+    margin-top: 8px;
+    margin-bottom: var(--space-s);
+}
+
+.orcamento .esquerda > p:nth-child(3){
+    margin-bottom: var(--space-m);
+    line-height: 1.6;
+}
 
 /* =========================
    PARTE DA ESQUERDA
    ========================= */
 
+.infos{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    border-left: 2px solid var(--color-golden);
+    padding-left: 14px;
+}
+
 .orcamento .phone,
 .orcamento .email,
 .orcamento .localizacao {
-    border-left: 2px solid var(--color-golden);
-    padding-left: 10px;
-    margin-bottom: 3px;
+    padding-left: 0;
 }
-
-
-
 
 /* TELEFONE / EMAIL / OFICINA */
 
@@ -471,16 +622,15 @@ a{color:inherit;text-decoration:none;}
 .orcamento .email p:first-child,
 .orcamento .localizacao p:first-child {
     color: var(--color-golden);
-    margin:5px;
-    font-size: 10px;
-    
+    margin: 0 0 6px 0;
+    font-size: 11px;
+    letter-spacing: 0.5px;
 }
 .orcamento .phone p:nth-child(2),
 .orcamento .email p:nth-child(2),
 .orcamento .localizacao p:nth-child(2) {
     margin: 0px;
     font-size: 17px;
-    
 }
 
 
@@ -491,13 +641,23 @@ a{color:inherit;text-decoration:none;}
 
 .linha{
     display: flex;
-    gap: 15px;
-    padding: 5px;
+    gap: var(--space-s);
+    padding: 10px 0;
+}
+.campo{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: var(--text-secondary, #555);
 }
 .setor {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  margin-top: 4px;
 }
 
 .setor label {
@@ -513,14 +673,14 @@ a{color:inherit;text-decoration:none;}
 
 .setor label:has(input:checked) {
   background: var(--color-champagne);
-  
 }
 
 .orcamento form{
     border: 1px solid var(--color-champagne);
     border-radius: 10px;
     background-color: var(--color-panel);
-    padding: 20px;
+    padding: var(--space-m);
+    flex: 1;
 }
 /* INPUTS */
 
@@ -529,24 +689,20 @@ a{color:inherit;text-decoration:none;}
 .orcamento form input[type="tel"],
 .orcamento form textarea {
     width: 100%;
-
     box-sizing: border-box;
-
-    padding: 6px;
-
+    padding: 12px;
     border: 1px solid #ccc;
-
+    border-radius: 4px;
     font-family: inherit;
-
-    font-size: 12px;
+    font-size: 14px;
+    margin-top: 4px;
 }
 
 
 /* TEXTAREA */
 
 .orcamento form textarea {
-    height: 60px;
-
+    height: 90px;
     resize: vertical;
 }
 
@@ -561,19 +717,15 @@ a{color:inherit;text-decoration:none;}
 /* BOTÃO */
 
 .orcamento form input[type="submit"] {
-    margin-top: 4px;
-
-    padding: 9px;
-
+    margin-top: var(--space-s);
+    padding: 12px 24px;
     border: none;
-
+    border-radius: 4px;
     background-color: var(--color-golden);
-
     color: white;
-
     cursor: pointer;
-
-    font-size: 11px;
+    font-size: 13px;
+    font-weight: 600;
 }
 /* =========================
    FOOTER
@@ -586,9 +738,9 @@ footer {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 300px;
+    gap: var(--space-l);
 
-    padding: 50px 40px 40px 40px;
+    padding: var(--space-l) 40px var(--space-m) 40px;
 
     background-color: #111;
 
@@ -597,8 +749,8 @@ footer {
 
 .footer_fim{
     display: grid;
-     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.5fr);
-    gap: 40px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.5fr);
+    gap: var(--space-m);
     flex: 1;
 }
 /* =========================
@@ -614,15 +766,10 @@ footer {
 
 .footer_inicio img {
     width: 80px;
-
     height: auto;
-
     padding: 0;
-
-    margin-bottom: 12px;
+    margin-bottom: var(--space-s);
 }
-
-
 
 
 /* =========================
@@ -630,36 +777,23 @@ footer {
    CONTACTOS
    ========================= */
 
- 
 footer .empresa,
 footer .servicos,
 footer .CONTACTOS {
     display: flex;
-
     flex-direction: column;
-
-    gap: 8px;
-
-    
+    gap: 10px;
 }
 
+footer .contactos p{
+    line-height: 1.6;
+    margin: 0 0 8px 0;
+}
 
 /* TÍTULOS */
 
 footer span {
     color: var(--color-golden);
+    display: block;
+    margin-bottom: 4px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

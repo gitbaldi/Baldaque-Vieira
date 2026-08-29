@@ -4,7 +4,7 @@
         <img src="../OneDrive_2026-06-23/Site - BeV/Fotos Site/BOA_IMG_5769.jpg"alt="maquina">
         <div class="conteudo">
 
-        <h2> BALDAQUE & VIEIRA</h2>
+        <h2> BALDAQUE & VIEIRA </h2>
         <p>Especialistas em fabrico, manutenção e assistência técnica de maquinaria industrial em aço inoxidável, desenvolvendo soluções adaptadas às necessidades de cada cliente. </p>
         <button> Saiba Mais</button>
         <button> Solicitar Orçamento</button>
@@ -13,7 +13,7 @@
     <main class="conteudo_pagina"> 
     <div class ="mercado_alvo">
         <h1> Mercado Alvo </h1>
-        <p>Desenvolvemos soluções personalizadas e adaptadas com forte presença no mercado nacional e comunitário, nomeadamente em Espanha e França.<p>
+        <p>Desenvolvemos soluções personalizadas e adaptadas com forte presença no mercado nacional e comunitário, nomeadamente em Espanha e França.</p>
         <div class="mercados">
             <a class ="corticeiro" href="corticeiro.html">
                 <img src="../IMG_0817.jpg" alt="imagem_corticeiro">
@@ -39,7 +39,7 @@
     </div>
     <div class = "about_us">
         <h4> SOBRE NÓS </h4>
-        <h2> Os nossos valores </h2>
+        <h1> Os nossos valores </h1>
         <div class="caixas">
         <div class="card">
             
@@ -102,15 +102,27 @@
 
     <div class = "location">
         <div class = "texto">
-        <h2> Localização </h2>
+        <h1> Localização </h1>
         <p>A Baldaque & Vieira, Lda encontra-se estrategicamente localizada na freguesia de Paços de Brandão, no concelho de Santa Maria da Feira, integrando uma região industrial de excelência no norte de Portugal.
         <br>Situada junto à Avenida do Portelo e Avenida Matoso, a fábrica possui excelentes ligações rodoviárias às principais vias do eixo Porto-Aveiro.</p>
     </div>
-        <img src="../mapa_temp.png" alt="localizacao">
+        <div class="mapa" id="mapaLocalizacao">
+    <div class="mapa-consent" id="mapaConsent">
+        <p>Ao carregar o mapa, aceitas a utilização de cookies do Google Maps para mostrar a nossa localização.</p>
+        <button type="button" id="mapaAceitar">Ver mapa</button>
+    </div>
+</div>
+
+<script>
+document.getElementById('mapaAceitar').addEventListener('click', function () {
+    document.getElementById('mapaLocalizacao').innerHTML =
+        '<iframe src="https://www.google.com/maps?q=R.+2+Urbaniza%C3%A7%C3%A3o+Portela+39,+4535-516+Santa+Maria+da+Feira&output=embed" allowfullscreen loading="lazy"></iframe>';
+});
+</script>
     </div>
     <div class ="orcamento">
         <div class= esquerda>
-        <p> --- FALE CONOSCO</p>
+        <p class="linha-topo">FALE CONOSCO</p>
         <h3> Peça o seu Orçamento</h3>
         <p> Descreva o equipamento ou serviço do qual quer receber mais informações<br>Responderemos o mais brevemente possível</p>
         <div class = "infos">
@@ -186,25 +198,47 @@
             </div>
         </footer>
     </div>
-     <script>
-    const sidebar = document.querySelector('.upper_sidebar');
-const hero = document.querySelector('.introducao');
-const logo = document.querySelector('.upper_sidebar img');
+     
 
-const logoNormal = '../BeV_logo_preto.png';
-const logoScrolled = '../BeV_logo_branco_incompleto.png'; // ou a versão que quiseres mostrar
+<script>
+const sidebar = document.querySelector('nav');
+const logo = document.querySelector('nav img');
 
-window.addEventListener('scroll', () => {
-  const heroHeight = hero.offsetHeight;
+const logoNormal = '../BeV_logo_preto.png';           
+const logoScrolled = '../BeV_logo_branco_incompleto.png'; 
 
-  if (window.scrollY > heroHeight) {
-    sidebar.classList.add('scrolled');
-    logo.src = logoScrolled;
-  } else {
+
+const darkSections = document.querySelectorAll('.introducao, .mercado_alvo, .equipamentos');
+
+
+const ANTECIPACAO = 60;
+
+function updateSidebar() {
+  const navHeight = sidebar.offsetHeight;
+  const checkPoint = navHeight + ANTECIPACAO;
+
+  let overDark = false;
+  darkSections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top <= checkPoint && rect.bottom >= checkPoint) {
+      overDark = true;
+    }
+  });
+
+  if (overDark) {
+    
     sidebar.classList.remove('scrolled');
     logo.src = logoNormal;
+  } else {
+    
+    sidebar.classList.add('scrolled');
+    logo.src = logoScrolled;
   }
-});
-  </script>
+}
+
+window.addEventListener('scroll', updateSidebar);
+window.addEventListener('load', updateSidebar);
+window.addEventListener('resize', updateSidebar);
+</script>
   </body>
 </html>

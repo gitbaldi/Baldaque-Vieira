@@ -1,5 +1,5 @@
 <?php include 'header.php'; ?>
-    <div class="upper_sidebar">
+    <nav>
         <a href="home_page.php"><img src="../BeV_logo_preto.png"alt="logo_preto"></a>
         <div class="direita">
             <a href="home_page.php"> INICIO </a>
@@ -9,4 +9,4 @@
             <a href="orcamento.php"> ORÇAMENTO </a>
             
         </div>
-    </div>
+</nav>
