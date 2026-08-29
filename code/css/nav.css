@@ -1,0 +1,38 @@
+nav{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background:var(--color-beige);
+  padding:0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: background-color 0.3s ease;
+}
+nav.scrolled{
+  background-color: black;
+  color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,.15);
+}
+nav.scrolled .direita a:nth-child(5){
+    color:#111;
+}
+.direita{
+  display: flex;
+}
+nav img{
+  padding:20px;
+  height:40px;
+  margin-right:auto;
+}
+.direita a:last-child{
+  background:var(--color-champagne);
+  margin-right:10px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+}
+.direita a{
+  padding: 15px;
+}

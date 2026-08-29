@@ -1,4 +1,4 @@
-<?php include 'upper_sidebar.php'; ?>
+<?php include 'nav.php'; ?>
    
 <div class="introducao">
         <img src="../OneDrive_2026-06-23/Site - BeV/Fotos Site/BOA_IMG_5769.jpg"alt="maquina">
@@ -103,7 +103,7 @@
     <div class = "location">
         <div class = "texto">
         <h1> Localização </h1>
-        <p>A Baldaque & Vieira, Lda encontra-se estrategicamente localizada na freguesia de Paços de Brandão, no concelho de Santa Maria da Feira, integrando uma região industrial de excelência no norte de Portugal.
+        <p>A <strong>Baldaque & Vieira</strong>, Lda encontra-se estrategicamente localizada na freguesia de <strong>Paços de Brandão</strong>, no concelho de Santa Maria da Feira, integrando uma região industrial de excelência no <strong>norte de Portugal</strong>.
         <br>Situada junto à Avenida do Portelo e Avenida Matoso, a fábrica possui excelentes ligações rodoviárias às principais vias do eixo Porto-Aveiro.</p>
     </div>
         <div class="mapa" id="mapaLocalizacao">
@@ -168,36 +168,8 @@ document.getElementById('mapaAceitar').addEventListener('click', function () {
         </form>
 
         </main>
-        <footer>
-              <div class="footer_inicio">
-
-            <img src="../BeV_logo_branco_completo.png"alt="logo_branco_completo">
-            <p> Construção e manutenção de máquinas em aço inoxidável para a indústria corticeira, vitivinícula e alimentar</p>
-            
-        </div>
-        <div class="footer_fim">
-        <div class = "empresa">
-                <span>EMPRESA</span>
-                <a href="about_us.php">Sobre nós</a>
-                <a href="about_us.php">Certificações</a>
-                <a href="about_us.php">Projetos</a>
-            </div>
-            <div class = "servicos">
-                <span>SERVIÇOS</span>
-                <a href="about_us.php">Construção</a>
-                <a href="about_us.php">Manutenção</a>
-                <a href="about_us.php">Soldadura INOX</a>
-                <a href="about_us.php">Assistência</a>
-            </div>
-            <div class = "contactos">
-                <span>CONTACTOS</span>
-                <p> R. 2 Urbanização Portela 39, 4535-516 Santa Maria da Feira <br> Portugal</p>
-                <p> +351 220 991 303</p>
-                <p> geral@baldaque-e-vieira.pt</p>
-            </div>
-            </div>
-        </footer>
-    </div>
+        
+<?php include 'footer.php'; ?>  
      
 
 <script>

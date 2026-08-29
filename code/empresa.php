@@ -1,4 +1,4 @@
-<?php include 'upper_sidebar.php'; ?>
+<?php include 'nav.php'; ?>
         <div class="capa">
         <p> Empresa </p>
         <h3> Engenharia Industrial com Qualidade e Durabilidade </h3>
@@ -27,3 +27,5 @@
 
 
     </body>
+
+    <?php include 'footer.php'; ?>

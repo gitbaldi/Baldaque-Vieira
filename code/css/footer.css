@@ -1,0 +1,63 @@
+footer {
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 100px;
+
+    padding: var(--space-l) 40px var(--space-m) 40px;
+
+    background-color: #111;
+    color: white;
+}
+
+.footer_fim {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.5fr);
+    gap: var(--space-l); 
+    flex: 1;
+}
+
+
+.footer_inicio {
+    width: 450px;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+}
+.footer_inicio p{
+    width: 250px;
+}
+
+.footer_inicio img {
+    width: 80px;
+    height: auto;
+    padding: 0;
+    margin-bottom: var(--space-s);
+}
+
+
+
+footer .empresa,
+footer .servicos,
+footer .contactos {
+    display: flex;
+    flex-direction: column;
+    gap: 6px; 
+}
+
+footer .contactos p {
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+
+footer span {
+    color: var(--color-golden);
+    display: block;
+    margin-bottom: 8px; 
+    letter-spacing: 0.5px;
+}
