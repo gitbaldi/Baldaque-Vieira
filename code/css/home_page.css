@@ -356,7 +356,7 @@ padding-bottom: 12px;
     margin: 0;
 }
 
-/* overlay vermelho, visível por padrão */
+
 .caixa::after {
     content: "";
     position: absolute;
@@ -370,8 +370,6 @@ padding-bottom: 12px;
 .caixa:hover::after {
     opacity: 0;
 }
-
-/* texto centrado, por cima do vermelho, visível por padrão */
 .caixa_overlay {
     position: absolute;
     inset: 0;

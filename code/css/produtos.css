@@ -1,0 +1,245 @@
+body{
+    padding-top: 80px;
+    background-color: var(--color-panel);
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.equipamentos {
+   
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+    
+    width: calc(100% + 60px);
+    margin-left: -30px;
+    margin-right: -30px;
+    padding: var(--space-l) 30px;
+    box-sizing: border-box;
+    
+}
+
+.equipamentos h1 {
+    position: relative;
+    width: 100%;
+    margin-top: 0;
+    padding-bottom: 16px;
+    color: black;
+    text-align: center;
+}
+
+
+.equipamentos h1::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 56px;
+    height: 3px;
+    background: var(--color-golden);
+}
+
+.equipamentos h2{
+    position: relative;
+    width: 1000%;
+    margin-top: 0;
+    padding-bottom: 7px;
+    
+}
+
+.equipamentos h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 1px;
+    background-color: black;
+}
+
+.equipamentos > .caixa {
+    flex: 1 1 250px;
+}
+
+.caixa {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.caixa img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+}
+
+
+.caixa::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: color-mix(in srgb, var(--color-champagne) 85%, transparent);
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.caixa:hover::after {
+    opacity: 0;
+}
+
+
+.caixa_overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    padding: var(--space-s);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+
+    transition: opacity 0.3s ease;
+}
+
+.caixa:hover .caixa_overlay {
+    opacity: 0;
+}
+
+.caixa_overlay p {
+    margin: 0;
+    color: white;
+    font-size: 13px;
+}
+
+.caixa_overlay h4 {
+    margin: 0;
+    color: black;
+    line-height: 1.4;
+}
+
+
+.viti {
+    position: relative;
+    width: 100%;
+    margin-bottom: var(--space-l);
+}
+
+.viti-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    width: 68%;
+}
+
+.viti-bloco {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.viti-texto {
+    flex: 2.5;
+}
+
+.viti-texto p {
+    line-height: 1.7;
+    color: var(--color-ink-soft);
+    margin: 0 0 12px;
+}
+
+.viti-texto p:last-child {
+    margin-bottom: 0;
+}
+
+.viti-bloco:last-child .viti-texto p {
+    text-align: end;
+}
+
+.viti-foto {
+    flex: 1;
+}
+
+.viti-foto img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    display: block;
+}
+
+.orcamento {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 28%;
+    background:var(--color-beige);
+    padding: 20px;
+    box-sizing: border-box;
+    border : 1px solid var(--color-golden);
+    border-radius: 7px;
+}
+
+.orcamento .linha-topo {
+    color: var(--color-golden);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0 0 6px;
+}
+
+.orcamento h3 {
+    font-family: var(--font-header);
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 10px;
+    line-height: 1.2;
+}
+
+.orcamento-desc {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #666;
+    margin: 0 0 16px;
+}
+
+.orcamento form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.orcamento .campo input,
+.orcamento .campo select,
+.orcamento .campo textarea {
+    width: 100%;
+    font-size: 12px;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    color: #222;
+    box-sizing: border-box;
+}
+
+.orcamento input[type="submit"] {
+    background-color: var(--color-golden);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: opacity 0.2s ease;
+}
+
+.orcamento input[type="submit"]:hover {
+    opacity: 0.9;
+}

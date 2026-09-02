@@ -125,7 +125,7 @@ document.getElementById('mapaAceitar').addEventListener('click', function () {
 </script>
     </div>
     <div class ="orcamento">
-        <div class= esquerda>
+        <div class= "esquerda">
         <p class="linha-topo">FALE CONOSCO</p>
         <h3> Peça o seu Orçamento</h3>
         <p> Descreva o equipamento ou serviço do qual quer receber mais informações<br>Responderemos o mais brevemente possível</p>

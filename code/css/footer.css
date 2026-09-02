@@ -1,7 +1,7 @@
 footer {
-    width: 100%;
+    width: 100vw;
     box-sizing: border-box;
-
+    margin-left: calc(-50vw + 50%);
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
