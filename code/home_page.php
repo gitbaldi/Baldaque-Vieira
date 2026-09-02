@@ -1,5 +1,9 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+<link rel="stylesheet" href="css/home_page.css">
 <?php include 'nav.php'; ?>
-   
 <div class="introducao">
         <img src="../OneDrive_2026-06-23/Site - BeV/Fotos Site/BOA_IMG_5769.jpg"alt="maquina">
         <div class="conteudo">
