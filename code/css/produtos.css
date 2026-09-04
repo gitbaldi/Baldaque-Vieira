@@ -4,7 +4,7 @@ body{
     padding-left: 25px;
     padding-right: 25px;
 }
-.equipamentos {
+.corticeiro {
    
     display: flex;
     flex-wrap: wrap;
@@ -43,7 +43,7 @@ body{
     position: relative;
     width: 1000%;
     margin-top: 0;
-    padding-bottom: 7px;
+    padding-bottom: 9px;
     
 }
 
@@ -52,12 +52,12 @@ body{
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 60%;
+    width: 800px;
     height: 1px;
     background-color: black;
 }
 
-.equipamentos > .caixa {
+.corticeiro > .caixa {
     flex: 1 1 250px;
 }
 
@@ -129,20 +129,22 @@ body{
 .viti {
     position: relative;
     width: 100%;
+    margin-top: 40px;
     margin-bottom: var(--space-l);
+    overflow: visible;
 }
 
 .viti-conteudo {
     display: flex;
     flex-direction: column;
-    gap: var(--space-s);
+    gap: 8px;
     width: 68%;
 }
 
 .viti-bloco {
     display: flex;
     align-items: center;
-    gap: var(--space-xs);
+    gap:32px;
 }
 
 .viti-texto {
@@ -160,19 +162,74 @@ body{
 }
 
 .viti-bloco:last-child .viti-texto p {
-    text-align: end;
+    text-align: right;
 }
 
-.viti-foto {
-    flex: 1;
+.viti-foto{
+    flex: 0 0 auto;
+    width: fit-content;
 }
 
 .viti-foto img {
-    width: 100%;
+    
     max-height: 250px;
+    width:auto;
     object-fit: contain;
     display: block;
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
+     
 }
+
+.viti-uvas {
+    position: absolute;
+    top: -20px;
+    left: 48%;
+    width: 300px;
+    height: auto;
+    color: var(--color-golden);
+    fill: currentColor;
+    opacity: 0.08;
+    transform: rotate(25deg);
+    pointer-events: none;
+    z-index: 0;
+}
+.viti-uvas-2 {
+    position: absolute;
+    top: auto;
+    bottom: -90px;
+    left: 0;
+    width: 300px;
+    height: auto;
+    color: var(--color-golden);
+    fill: currentColor;
+    opacity: 0.08;
+    transform: rotate(-25deg) scaleX(-1);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.viti-subtitulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-golden);
+    margin: 12px 0;
+}
+
+.viti-subtitulo::before,
+.viti-subtitulo::after {
+    content: "";
+    width: 150px;
+    height: 1px;
+    background: var(--color-golden);
+    opacity: 0.4;
+}
+
 
 .orcamento {
     position: absolute;
@@ -228,18 +285,50 @@ body{
     box-sizing: border-box;
 }
 
-.orcamento input[type="submit"] {
+.orcamento form input[type="submit"] {
+    margin-top: 5px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
     background-color: var(--color-golden);
     color: white;
-    border: none;
-    padding: 10px 16px;
-    font-size: 12px;
-    letter-spacing: 1px;
     cursor: pointer;
-    margin-top: 4px;
-    transition: opacity 0.2s ease;
+    font-size: 13px;
+    font-weight: 600;
 }
+
+
 
 .orcamento input[type="submit"]:hover {
     opacity: 0.9;
+}
+
+.campo{
+    color: #555;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap:6px;
+}
+.setor {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.setor label {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.setor input {
+  display: none;
+}
+
+.setor label:has(input:checked) {
+  background: var(--color-champagne);
 }
