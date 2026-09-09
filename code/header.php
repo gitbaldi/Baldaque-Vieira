@@ -1,6 +1,8 @@
 
         <meta charset="UTF-8">
-        <link rel="icon" href="../BeV_logo_preto.png" type="image/png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../e-icon.svg?v=1" type="image/svg+xml">
+        <link rel="alternate icon" href="../favicon-e-dourado.png?v=1" type="image/png">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="css/variables.css">  
     <link rel="stylesheet" href="css/nav.css">

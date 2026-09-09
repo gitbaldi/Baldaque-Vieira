@@ -3,15 +3,15 @@
 <html>
     <head>
 <link rel="stylesheet" href="css/home_page.css">
-<?php include 'nav.php'; ?>
+<?php $darkSections = '.introducao, .mercado_alvo, .equipamentos'; include 'nav.php'; ?>
 <div class="introducao">
         <img src="../OneDrive_2026-06-23/Site - BeV/Fotos Site/BOA_IMG_5769.jpg"alt="maquina">
         <div class="conteudo">
 
         <h2> BALDAQUE & VIEIRA </h2>
         <p>Especialistas em fabrico, manutenção e assistência técnica de maquinaria industrial em aço inoxidável, desenvolvendo soluções adaptadas às necessidades de cada cliente. </p>
-        <button> Saiba Mais</button>
-        <button> Solicitar Orçamento</button>
+        <button onclick="window.location.href='empresa.php'"> Saiba Mais</button>
+        <button onclick="abrirModal(event)"> Solicitar Orçamento</button>
         </div>
     </div>
     <main class="conteudo_pagina"> 
@@ -19,7 +19,7 @@
         <h1> Mercado Alvo </h1>
         <p>Desenvolvemos soluções personalizadas e adaptadas com forte presença no mercado nacional e comunitário, nomeadamente em Espanha e França.</p>
         <div class="mercados">
-            <a class ="corticeiro" href="corticeiro.html">
+            <a class ="corticeiro" href="produtos.php#corticeiro">
                 <img src="../IMG_0817.jpg" alt="imagem_corticeiro">
                 <div class="mercado_texto">
                     <h4>CORTICEIRO</h4>
@@ -29,12 +29,13 @@
                     <span>Saber mais <span class="seta">&rarr;</span></span>
                 </div>
             </a>
-            <a class ="viti_alimentar" href="viti_ali.html">
+            <a class="viti_alimentar" href="produtos.php#viti-alimentar">
                 <img src="../IMG_2143_viti.jpg" alt="imagem_vitivinicula">
                 <div class="mercado_texto">
                     <h4>VITIVINÍCULA & ALIMENTAR</h4>
-                    <p>Personalização de máquinas ????? </p>
+                    <p>Máquinas e soluções à medida para processos vitivinícolas e alimentares</p>
                 </div>
+
                 <div class="mercado_hover">
                     <span>Saber mais <span class="seta">&rarr;</span></span>
                 </div>
@@ -78,29 +79,7 @@
     <div class="equipamentos">
   <h1>PRODUTOS </h1>
 
-  <a href="maquina-mlb300k.html" class="caixa">
-    <img src="../fotos_organizadas/Selecao_MLB300K/Selecao_MLB300K/capa_centrada.jpeg" alt="Máquina de lavar, branquear e pré-secar rolhas e discos de cortiça">
-    <div class="caixa_overlay">
-      <p>Corticeiro</p>
-      <h4>Máquina de lavar, branquear e pré-secar rolhas e discos de cortiça</h4>
-    </div>
-  </a>
-
-  <a href="maquina-mdg2.html" class="caixa">
-    <img src="../fotos_organizadas/Selecao_MDG2/Selecao_MDG2/Capa2.JPG" alt="Máquina de Desinfeção de Granulado de Cortiça">
-    <div class="caixa_overlay">
-      <p>Corticeiro</p>
-      <h4>Máquina de Desinfeção de Granulado de Cortiça</h4>
-    </div>
-  </a>
-
-  <a href="maquina-cd.html" class="caixa">
-    <img src="../fotos_organizadas/Selecao_CD/Selecao_CD/tentativa2.png" alt="Câmara de Desinfeção de Cortiça">
-    <div class="caixa_overlay">
-      <p>Corticeiro</p>
-      <h4>Câmara de Desinfeção de Cortiça</h4>
-    </div>
-  </a>
+<?php include 'produtos-cards.php'; ?>
 
 </div>
 
@@ -124,7 +103,7 @@ document.getElementById('mapaAceitar').addEventListener('click', function () {
 });
 </script>
     </div>
-    <div class ="orcamento">
+    <div class ="orcamento"id="fale-conosco">
         <div class= "esquerda">
         <p class="linha-topo">FALE CONOSCO</p>
         <h3> Peça o seu Orçamento</h3>
@@ -176,45 +155,6 @@ document.getElementById('mapaAceitar').addEventListener('click', function () {
 <?php include 'footer.php'; ?>  
      
 
-<script>
-const sidebar = document.querySelector('nav');
-const logo = document.querySelector('nav img');
-
-const logoNormal = '../BeV_logo_preto.png';           
-const logoScrolled = '../BeV_logo_branco_incompleto.png'; 
-
-
-const darkSections = document.querySelectorAll('.introducao, .mercado_alvo, .equipamentos');
-
-
-const ANTECIPACAO = 60;
-
-function updateSidebar() {
-  const navHeight = sidebar.offsetHeight;
-  const checkPoint = navHeight + ANTECIPACAO;
-
-  let overDark = false;
-  darkSections.forEach(section => {
-    const rect = section.getBoundingClientRect();
-    if (rect.top <= checkPoint && rect.bottom >= checkPoint) {
-      overDark = true;
-    }
-  });
-
-  if (overDark) {
-    
-    sidebar.classList.remove('scrolled');
-    logo.src = logoNormal;
-  } else {
-    
-    sidebar.classList.add('scrolled');
-    logo.src = logoScrolled;
-  }
-}
-
-window.addEventListener('scroll', updateSidebar);
-window.addEventListener('load', updateSidebar);
-window.addEventListener('resize', updateSidebar);
-</script>
+<script src="js/sidebar-scroll.js"></script>
   </body>
 </html>

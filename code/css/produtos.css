@@ -126,7 +126,9 @@ body{
     line-height: 1.4;
 }
 
-
+#viti-alimentar, #corticeiro {
+    scroll-margin-top: 100px;
+}
 .viti {
     position: relative;
     width: 100%;
@@ -332,4 +334,51 @@ body{
 
 .setor label:has(input:checked) {
   background: var(--color-champagne);
+}
+
+/* =========================
+   RESPONSIVO
+   ========================= */
+@media (max-width: 900px) {
+  .viti{
+    margin-bottom: var(--space-l);
+  }
+  .viti-conteudo{
+    width: 100%;
+  }
+  .viti-bloco{
+    flex-direction: column;
+    gap: var(--space-s);
+  }
+  .viti-bloco:last-child .viti-texto p{
+    text-align: left;
+  }
+  .viti-foto img{
+    max-height: 220px;
+    width: 100%;
+    object-fit: contain;
+  }
+  .orcamento{
+    position: static;
+    width: 100%;
+    margin-top: var(--space-m);
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 600px) {
+  body{
+    padding-top: 90px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .corticeiro{
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 10px 16px 40px 16px;
+  }
+  .equipamentos .caixa img{
+    height: 260px;
+  }
 }

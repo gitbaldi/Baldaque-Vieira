@@ -36,3 +36,252 @@ nav img{
 .direita a{
   padding: 15px;
 }
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  margin-right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  transition: transform .25s ease, opacity .25s ease;
+}
+nav.menu-aberto .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+nav.menu-aberto .nav-toggle span:nth-child(2) { opacity: 0; }
+nav.menu-aberto .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 780px) {
+  nav {
+    flex-wrap: wrap;
+  }
+  .nav-toggle {
+    display: flex;
+  }
+  .direita {
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+  }
+  nav.menu-aberto .direita {
+    max-height: 600px;
+  }
+  .direita a {
+    padding: 16px 24px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  nav.scrolled .direita a {
+    border-top-color: rgba(255, 255, 255, 0.12);
+  }
+  .direita a:last-child {
+    margin-right: 0;
+    margin: 10px 24px;
+    text-align: center;
+    border-top: none;
+  }
+}
+
+.modal-overlay {
+    display: none !important;
+    position: fixed !important;
+    inset: 0 !important;
+    background: rgba(20, 16, 10, 0.65) !important;
+    backdrop-filter: blur(2px);
+    z-index: 1000 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+}
+
+.modal-overlay.aberto {
+    display: flex !important;
+}
+
+.modal-conteudo {
+    position: relative;
+    background: var(--color-beige);
+    border-radius: 10px;
+    padding: 40px 36px 32px;
+    max-width: 480px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: modal-entrada 0.25s ease;
+}
+
+@keyframes modal-entrada {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-fechar {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.06);
+    border: none;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.modal-fechar:hover {
+    background: var(--color-golden);
+    color: white;
+}
+
+.modal-conteudo .linha-topo {
+    color: var(--color-golden);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 8px;
+}
+
+.modal-conteudo h3 {
+    font-family: var(--font-header);
+    font-size: 26px;
+    font-weight: 500;
+    margin: 0 0 10px;
+    line-height: 1.2;
+}
+
+.modal-conteudo .orcamento-desc {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #777;
+    margin: 0 0 24px;
+}
+
+.modal-conteudo form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.modal-conteudo .campo {
+    color: #555;
+    letter-spacing: 0.5px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.modal-conteudo .campo input,
+.modal-conteudo .campo textarea {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: normal;
+    padding: 10px 12px;
+    border: 1px solid #d8d2c4;
+    border-radius: 6px;
+    font-family: inherit;
+    color: #222;
+    background: white;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.modal-conteudo .campo input:focus,
+.modal-conteudo .campo textarea:focus {
+    outline: none;
+    border-color: var(--color-golden);
+}
+
+.modal-conteudo .campo textarea {
+    resize: vertical;
+}
+
+.modal-conteudo .setor {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.modal-conteudo .setor label {
+    padding: 7px 12px;
+    border: 1px solid #d8d2c4;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: none;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.modal-conteudo .setor label:hover {
+    border-color: var(--color-golden);
+}
+
+.modal-conteudo .setor input {
+    display: none;
+}
+
+.modal-conteudo .setor label:has(input:checked) {
+    background: var(--color-golden);
+    border-color: var(--color-golden);
+    color: white;
+}
+
+.modal-conteudo input[type="submit"] {
+    margin-top: 8px;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--color-golden);
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.modal-conteudo input[type="submit"]:hover {
+    opacity: 0.92;
+}
+
+.modal-conteudo input[type="submit"]:active {
+    transform: scale(0.98);
+}

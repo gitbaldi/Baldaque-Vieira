@@ -9,7 +9,7 @@
 
         <div class = "empresa">
             <span>EMPRESA</span>
-            <a href="about_us.php">Sobre nós</a>
+            <a href="empresa.php">Sobre nós</a>
             <a href="about_us.php">Certificações</a>
             <a href="about_us.php">Projetos</a>
         </div>
