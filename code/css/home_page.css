@@ -705,6 +705,16 @@ padding-bottom: 12px;
     left: 0;
     right: auto;
   }
+  .introducao h2{
+    padding-bottom: 12px;
+  }
+  .mercado_alvo h1,
+  .about_us h1{
+    padding-bottom: 16px;
+  }
+  .equipamentos h1{
+    padding-bottom: 20px;
+  }
   .mercados img{
     height: 60vw;
   }

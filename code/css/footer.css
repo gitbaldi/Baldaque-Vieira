@@ -87,8 +87,14 @@ footer span {
 }
 
 @media (max-width: 560px) {
+    footer {
+        gap: var(--space-s);
+    }
     .footer_fim {
         grid-template-columns: 1fr;
         gap: var(--space-s);
+    }
+    footer .empresa {
+        display: none;
     }
 }

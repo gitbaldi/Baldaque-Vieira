@@ -539,6 +539,10 @@ body{
     width: 100%;
     object-fit: contain;
   }
+  .viti-bloco:first-child .viti-foto-legenda,
+  .viti-bloco:last-child .viti-foto-legenda{
+    text-align: center;
+  }
   .orcamento{
     position: static;
     width: 100%;
@@ -562,7 +566,23 @@ body{
     width: 100%;
     max-width: 400px;
     height: auto;
-    aspect-ratio: 400 / 460;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 220px 150px;
+  }
+  .perimetro-grande{
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  .perimetro-pequena-cima{
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .perimetro-pequena-baixo{
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .viti-uvas-2{
+    left: -40px;
   }
 }
 
@@ -580,5 +600,14 @@ body{
   }
   .equipamentos .caixa img{
     height: 260px;
+  }
+  .equipamentos h1{
+    padding-bottom: 20px;
+  }
+  .equipamentos h2{
+    padding-bottom: 13px;
+  }
+  .orcamento{
+    display: none;
   }
 }
