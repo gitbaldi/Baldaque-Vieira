@@ -35,7 +35,7 @@
         
         <div class="viti-bloco">
             <div class="viti-foto">
-                <img src="../fotos_organizadas/Vitivinicola.jpg" alt="Equipamento personalizado para o setor vitivinícola">
+                <img src="fotos_organizadas/Vitivinicola.jpg" alt="Equipamento personalizado para o setor vitivinícola">
                 <p class="viti-foto-legenda">Vitivinícola</p>
             </div>
             <div class="viti-texto">
@@ -62,7 +62,7 @@
                 <p>O nosso compromisso é <strong>acompanhar cada Cliente</strong> de forma próxima, encontrando soluções práticas e à medida das suas necessidades.</p>
             </div>
             <div class="viti-foto">
-                <img src="../fotos_organizadas/Alimentar.png" alt="Equipamento em aço inoxidável, setor alimentar">
+                <img src="fotos_organizadas/Alimentar.png" alt="Equipamento em aço inoxidável, setor alimentar">
                 <p class="viti-foto-legenda">Alimentar</p>
             </div>
         </div>
@@ -73,11 +73,17 @@
         <h3>Peça o seu Orçamento</h3>
         <p class="orcamento-desc">Descreva o equipamento ou serviço do qual quer receber mais informações.</p>
 
-        <form>
-             <div class= "campo">NOME <input name="nome" type="text" placeholder="O seu nome"></div>
-             <div class= "campo">EMPRESA <input name="nome" type="text" placeholder="Nome da Empresa"></div>
-             <div class= "campo">EMAIL <input name="nome" type="email" placeholder="Email"></div>
-             <div class= "campo">TELEFONE <input name="nome" type="tel" placeholder="Telefone"></div>
+        <form action="enviar-orcamento.php" method="post">
+             <?php if (($_GET['orcamento'] ?? '') === 'sucesso'): ?>
+                 <p class="form-msg sucesso">Pedido enviado com sucesso! Entraremos em contacto brevemente.</p>
+             <?php elseif (($_GET['orcamento'] ?? '') === 'erro'): ?>
+                 <p class="form-msg erro">Não foi possível enviar o pedido. Tente novamente ou contacte-nos por telefone/email.</p>
+             <?php endif; ?>
+             <input type="hidden" name="origem" value="produtos.php">
+             <div class= "campo">NOME <input name="nome" type="text" placeholder="O seu nome" required></div>
+             <div class= "campo">EMPRESA <input name="empresa" type="text" placeholder="Nome da Empresa"></div>
+             <div class= "campo">EMAIL <input name="email" type="email" placeholder="Email" required></div>
+             <div class= "campo">TELEFONE <input name="telefone" type="tel" placeholder="Telefone"></div>
             <div class="campo">
     SETOR
     <div class="setor">
@@ -105,13 +111,13 @@
 
       <div class="perimetro-imagens">
           <div class="caixa perimetro-caixa perimetro-grande">
-              <img src="../fotos_organizadas/Perimetro_Seguranca/Perimetro_Seguranca/IMG_2718.JPG" alt="Vedação perimetral com portas de correr e basculante">
+              <img src="fotos_organizadas/Perimetro_Seguranca/Perimetro_Seguranca/IMG_2718.JPG" alt="Vedação perimetral com portas de correr e basculante">
           </div>
           <div class="caixa perimetro-caixa perimetro-pequena-cima">
-              <img src="../fotos_organizadas/Perimetro_Seguranca/Perimetro_Seguranca/IMG_2719.JPG" alt="Botoneira para controlo de acesso e emergência">
+              <img src="fotos_organizadas/Perimetro_Seguranca/Perimetro_Seguranca/IMG_2719.JPG" alt="Botoneira para controlo de acesso e emergência">
           </div>
           <div class="caixa perimetro-caixa perimetro-pequena-baixo">
-              <img src="../fotos_organizadas/Perimetro_Seguranca/Perimetro_Seguranca/IMG_4352.jpg" alt="Porta basculante com encravamento elétrico">
+              <img src="fotos_organizadas/Perimetro_Seguranca/Perimetro_Seguranca/IMG_4352.jpg" alt="Porta basculante com encravamento elétrico">
           </div>
       </div>
 
@@ -133,9 +139,9 @@
   <script>
   (function() {
       const perimetroFotos = [
-          { src: '../fotos_organizadas/Perimetro_Seguranca/Perimetro_Seguranca/IMG_2718.JPG', legenda: 'Vedação perimetral com portas de correr e basculante, providas de botoneiras para controlo de acesso e emergência.' },
-          { src: '../fotos_organizadas/Perimetro_Seguranca/Perimetro_Seguranca/IMG_2719.JPG', legenda: 'Botoneira para controlo de acesso e emergência.' },
-          { src: '../fotos_organizadas/Perimetro_Seguranca/Perimetro_Seguranca/IMG_4352.jpg', legenda: 'Porta basculante com encravamento elétrico.' },
+          { src: 'fotos_organizadas/Perimetro_Seguranca/Perimetro_Seguranca/IMG_2718.JPG', legenda: 'Vedação perimetral com portas de correr e basculante, providas de botoneiras para controlo de acesso e emergência.' },
+          { src: 'fotos_organizadas/Perimetro_Seguranca/Perimetro_Seguranca/IMG_2719.JPG', legenda: 'Botoneira para controlo de acesso e emergência.' },
+          { src: 'fotos_organizadas/Perimetro_Seguranca/Perimetro_Seguranca/IMG_4352.jpg', legenda: 'Porta basculante com encravamento elétrico.' },
       ];
       let perimetroIndice = 0;
 

@@ -25,7 +25,7 @@
     </div>
 </div>
           <div class ="historia">
-            <img src="../fabrica.jpeg" alt="Fábrica">
+            <img src="fabrica.jpeg" alt="Fábrica">
             <div class="f_dir">
               <h1> A nossa história </h1>
             <p>  <strong>Fundada em 2012</strong> por Tiago Baldaque e José Vieira, tem como principal atividade o fabrico, manutenção e assistência técnica de máquinas industriais.</p>
@@ -102,7 +102,7 @@ function resetEstado() {
         <p>A Baldaque & Vieira aposta na personalização de serviços, objetivando que cada máquina não encontre um padrão de produção, mas sim uma adaptação a cada necessidade específica dos clientes, de forma que o resultado final seja único e intransmissível.</p>
     </div>
     <div class="premio-barra"></div>
-    <img src="../OneDrive_2026-06-23/Site - BeV/Logos/PME_Excelencia_2024/Logos-PME-Excelencia-2024/Imagens/logo_PME Excelencia_2024_cores_CMYK.png" alt="PME 2024">
+    <img src="OneDrive_2026-06-23/Site - BeV/Logos/PME_Excelencia_2024/Logos-PME-Excelencia-2024/Imagens/logo_PME Excelencia_2024_cores_CMYK.png" alt="PME 2024">
 </div>
       
 
@@ -113,18 +113,18 @@ function resetEstado() {
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
         </button>
         <div class="clientes_carrossel">
-            <img src="../clientes/1_cork_suply_e.png" alt="Cliente 1">
-            <img src="../clientes/2_amorim_cork.png" alt="Cliente 2">
-            <img src="../clientes/3_diam.png" alt="Cliente 3">
-            <img src="../clientes/4_frulact.png" alt="Cliente 4">
-            <img src="../clientes/5_rozes_e.png" alt="Cliente 5">
-            <img src="../clientes/6_jps_e.png" alt="Cliente 6">
-            <img src="../clientes/7_unicor_e.png" alt="Cliente 7">
-            <img src="../clientes/8_socori_e.png" alt="Cliente 8">
-            <img src="../clientes/9_amorim_top_series.png" alt="Cliente 9">
-            <img src="../clientes/10_ma_silva.png" alt="Cliente 10">
-            <img src="../clientes/11_lafitte.webp" alt="Cliente 11">
-            <img src="../clientes/12_ja_e.png" alt="Cliente 12">
+            <img src="clientes/1_cork_suply_e.png" alt="Cliente 1">
+            <img src="clientes/2_amorim_cork.png" alt="Cliente 2">
+            <img src="clientes/3_diam.png" alt="Cliente 3">
+            <img src="clientes/4_frulact.png" alt="Cliente 4">
+            <img src="clientes/5_rozes_e.png" alt="Cliente 5">
+            <img src="clientes/6_jps_e.png" alt="Cliente 6">
+            <img src="clientes/7_unicor_e.png" alt="Cliente 7">
+            <img src="clientes/8_socori_e.png" alt="Cliente 8">
+            <img src="clientes/9_amorim_top_series.png" alt="Cliente 9">
+            <img src="clientes/10_ma_silva.png" alt="Cliente 10">
+            <img src="clientes/11_lafitte.webp" alt="Cliente 11">
+            <img src="clientes/12_ja_e.png" alt="Cliente 12">
         </div>
         <button class="clientes_seta clientes_seta-direita" onclick="clientesScroll(1)" aria-label="Clientes seguintes">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>

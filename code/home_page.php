@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="css/home_page.css">
 <?php $darkSections = '.introducao, .mercado_alvo, .equipamentos'; include 'nav.php'; ?>
 <div class="introducao">
-        <img src="../OneDrive_2026-06-23/Site - BeV/Fotos Site/BOA_IMG_5769.jpg"alt="maquina">
+        <img src="OneDrive_2026-06-23/Site - BeV/Fotos Site/BOA_IMG_5769.jpg"alt="maquina">
         <div class="conteudo">
 
         <h2> BALDAQUE & VIEIRA </h2>
@@ -20,7 +20,7 @@
         <p>Desenvolvemos soluções personalizadas e adaptadas com forte presença no mercado nacional e comunitário, nomeadamente em Espanha e França.</p>
         <div class="mercados">
             <a class ="corticeiro" href="produtos.php#corticeiro">
-                <img src="../IMG_0817.jpg" alt="imagem_corticeiro">
+                <img src="IMG_0817.jpg" alt="imagem_corticeiro">
                 <div class="mercado_texto">
                     <h4>CORTICEIRO</h4>
                     <p>Soluções industriais para o processamento e transformação da cortiça </p>
@@ -30,7 +30,7 @@
                 </div>
             </a>
             <a class="viti_alimentar" href="produtos.php#viti-alimentar">
-                <img src="../IMG_2143_viti.jpg" alt="imagem_vitivinicula">
+                <img src="IMG_2143_viti.jpg" alt="imagem_vitivinicula">
                 <div class="mercado_texto">
                     <h4>VITIVINÍCOLA & ALIMENTAR</h4>
                     <p>Máquinas e soluções à medida para processos vitivinícolas e alimentares</p>
@@ -128,14 +128,20 @@ document.getElementById('mapaAceitar').addEventListener('click', function () {
 </div>
 </div>
 
-        <form>
-            <div class = "linha"> 
-            <div class= "campo">NOME <input name="nome" type="text" placeholder="O seu nome"></div>
-            <div class= "campo">EMPRESA <input name="time" type="text" placeholder="Nome da Empresa"></div>
+        <form action="enviar-orcamento.php" method="post">
+            <?php if (($_GET['orcamento'] ?? '') === 'sucesso'): ?>
+                <p class="form-msg sucesso">Pedido enviado com sucesso! Entraremos em contacto brevemente.</p>
+            <?php elseif (($_GET['orcamento'] ?? '') === 'erro'): ?>
+                <p class="form-msg erro">Não foi possível enviar o pedido. Tente novamente ou contacte-nos por telefone/email.</p>
+            <?php endif; ?>
+            <input type="hidden" name="origem" value="home_page.php">
+            <div class = "linha">
+            <div class= "campo">NOME <input name="nome" type="text" placeholder="O seu nome" required></div>
+            <div class= "campo">EMPRESA <input name="empresa" type="text" placeholder="Nome da Empresa"></div>
             </div>
-            <div class = "linha"> 
-            <div class= "campo">EMAIL <input name="email" type="email" placeholder="nome@empresa.pt"></div>
-            <div class= "campo">TELEFONE <input name="telephone" type="tel" placeholder="+351..."> </div> 
+            <div class = "linha">
+            <div class= "campo">EMAIL <input name="email" type="email" placeholder="nome@empresa.pt" required></div>
+            <div class= "campo">TELEFONE <input name="telefone" type="tel" placeholder="+351..."> </div>
             </div>
             <div class="linha">
   <div class="campo">

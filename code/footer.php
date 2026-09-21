@@ -1,7 +1,7 @@
 <footer>
     <div class="footer_inicio">
 
-        <img src="../BeV_logo_branco_completo.png"alt="logo_branco_completo">
+        <img src="BeV_logo_branco_completo.png"alt="logo_branco_completo">
         <p> Construção e manutenção de máquinas em aço inoxidável para a indústria corticeira, vitivinícula e alimentar</p>
         
     </div>

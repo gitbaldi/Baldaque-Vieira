@@ -4,8 +4,8 @@
     const selector = sidebar.dataset.darkSections || '';
     const darkSections = selector ? document.querySelectorAll(selector) : [];
 
-    const logoNormal = '../BeV_logo_preto.png';
-    const logoScrolled = '../BeV_logo_branco_incompleto.png';
+    const logoNormal = 'BeV_logo_preto.png';
+    const logoScrolled = 'BeV_logo_branco_incompleto.png';
 
     const ANTECIPACAO = 60;
 

@@ -34,10 +34,10 @@ $maquinas = [
             ],
         ],
         'fotos' => [
-            ['src' => '../fotos_organizadas/Selecao_CD/Selecao_CD/Capa.jpg', 'legenda' => 'Vista frontal'],
-            ['src' => '../fotos_organizadas/Selecao_CD/Selecao_CD/Interior.jpg', 'legenda' => 'Vista interior'],
-            ['src' => '../fotos_organizadas/Selecao_CD/Selecao_CD/Bateria_Aquecimento.jpg', 'legenda' => 'Bateria de aquecimento'],
-            ['src' => '../fotos_organizadas/Selecao_CD/Selecao_CD/Ventilacao_Interna.jpg', 'legenda' => 'Sistema de ventilação interna'],
+            ['src' => 'fotos_organizadas/Selecao_CD/Selecao_CD/Capa.jpg', 'legenda' => 'Vista frontal'],
+            ['src' => 'fotos_organizadas/Selecao_CD/Selecao_CD/Interior.jpg', 'legenda' => 'Vista interior'],
+            ['src' => 'fotos_organizadas/Selecao_CD/Selecao_CD/Bateria_Aquecimento.jpg', 'legenda' => 'Bateria de aquecimento'],
+            ['src' => 'fotos_organizadas/Selecao_CD/Selecao_CD/Ventilacao_Interna.jpg', 'legenda' => 'Sistema de ventilação interna'],
         ],
         'modelos' => [
             'CD600K' => [
@@ -89,10 +89,10 @@ $maquinas = [
             ],
         ],
         'fotos' => [
-            ['src' => '../fotos_organizadas/Selecao_MDG2/Selecao_MDG2/Sistema_aquecimento_gerador.jpg', 'legenda' => 'Sistema de aquecimento — gerador'],
-            ['src' => '../fotos_organizadas/Selecao_MDG2/Selecao_MDG2/Sistema_aquecimento_vapor.jpg', 'legenda' => 'Sistema de aquecimento a vapor'],
-            ['src' => '../fotos_organizadas/Selecao_MDG2/Selecao_MDG2/Sistema_correcao_humidade.jpg', 'legenda' => 'Sistema de correção de humidade'],
-            ['src' => '../fotos_organizadas/Selecao_MDG2/Selecao_MDG2/Sistema_exaustao_duplo.JPG', 'legenda' => 'Sistema de exaustão duplo'],
+            ['src' => 'fotos_organizadas/Selecao_MDG2/Selecao_MDG2/Sistema_aquecimento_gerador.jpg', 'legenda' => 'Sistema de aquecimento — gerador'],
+            ['src' => 'fotos_organizadas/Selecao_MDG2/Selecao_MDG2/Sistema_aquecimento_vapor.jpg', 'legenda' => 'Sistema de aquecimento a vapor'],
+            ['src' => 'fotos_organizadas/Selecao_MDG2/Selecao_MDG2/Sistema_correcao_humidade.jpg', 'legenda' => 'Sistema de correção de humidade'],
+            ['src' => 'fotos_organizadas/Selecao_MDG2/Selecao_MDG2/Sistema_exaustao_duplo.JPG', 'legenda' => 'Sistema de exaustão duplo'],
         ],
         'modelos' => [
             'MDG2' => [
@@ -142,12 +142,12 @@ $maquinas = [
             ],
         ],
         'fotos' => [
-            ['src' => '../fotos_organizadas/Selecao_MLB300K/Selecao_MLB300K/Basculamento_Carga.jpg', 'legenda' => 'Basculamento de carga'],
-            ['src' => '../fotos_organizadas/Selecao_MLB300K/Selecao_MLB300K/Basculamento_Descarga.jpg', 'legenda' => 'Basculamento de descarga'],
-            ['src' => '../fotos_organizadas/Selecao_MLB300K/Selecao_MLB300K/Armazenamento_Reagentes_IBC.jpg', 'legenda' => 'Armazenamento de reagentes'],
-            ['src' => '../fotos_organizadas/Selecao_MLB300K/Selecao_MLB300K/Sistema_aquecimento_gas.jpg', 'legenda' => 'Sistema de aquecimento a gás'],
-            ['src' => '../fotos_organizadas/Selecao_MLB300K/Selecao_MLB300K/Pesagem_Reagentes.jpg', 'legenda' => 'Pesagem de reagentes'],
-            ['src' => '../fotos_organizadas/Selecao_MLB300K/Selecao_MLB300K/Sistema_Carga_Automatica.jpg', 'legenda' => 'Sistema de carga automática'],
+            ['src' => 'fotos_organizadas/Selecao_MLB300K/Selecao_MLB300K/Basculamento_Carga.jpg', 'legenda' => 'Basculamento de carga'],
+            ['src' => 'fotos_organizadas/Selecao_MLB300K/Selecao_MLB300K/Basculamento_Descarga.jpg', 'legenda' => 'Basculamento de descarga'],
+            ['src' => 'fotos_organizadas/Selecao_MLB300K/Selecao_MLB300K/Armazenamento_Reagentes_IBC.jpg', 'legenda' => 'Armazenamento de reagentes'],
+            ['src' => 'fotos_organizadas/Selecao_MLB300K/Selecao_MLB300K/Sistema_aquecimento_gas.jpg', 'legenda' => 'Sistema de aquecimento a gás'],
+            ['src' => 'fotos_organizadas/Selecao_MLB300K/Selecao_MLB300K/Pesagem_Reagentes.jpg', 'legenda' => 'Pesagem de reagentes'],
+            ['src' => 'fotos_organizadas/Selecao_MLB300K/Selecao_MLB300K/Sistema_Carga_Automatica.jpg', 'legenda' => 'Sistema de carga automática'],
         ],
         'modelos' => [
             '300K' => ['nome' => 'MLB 300K', 'capacidade' => '100 000 rolhas', 'spec_label' => 'Dimensão de rolha', 'spec_valor' => '38x24 mm'],

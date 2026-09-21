@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
     <nav<?php if (!empty($darkSections)) echo ' data-dark-sections="' . htmlspecialchars($darkSections) . '"'; ?>>
-        <a href="home_page.php"><img src="../BeV_logo_preto.png"alt="logo_preto"></a>
+        <a href="home_page.php"><img src="BeV_logo_preto.png"alt="logo_preto"></a>
         <button class="nav-toggle" onclick="toggleNav()" aria-label="Abrir menu">
             <span></span><span></span><span></span>
         </button>
@@ -19,10 +19,16 @@
         <p class="linha-topo">FALE CONNOSCO</p>
         <h3>Peça o seu Orçamento</h3>
         <p class="orcamento-desc">Descreva o equipamento ou serviço do qual quer receber mais informações.</p>
-        <form>
-            <div class="campo">NOME <input name="nome" type="text" placeholder="O seu nome"></div>
+        <form action="enviar-orcamento.php" method="post">
+            <?php if (($_GET['orcamento'] ?? '') === 'sucesso'): ?>
+                <p class="form-msg sucesso">Pedido enviado com sucesso! Entraremos em contacto brevemente.</p>
+            <?php elseif (($_GET['orcamento'] ?? '') === 'erro'): ?>
+                <p class="form-msg erro">Não foi possível enviar o pedido. Tente novamente ou contacte-nos por telefone/email.</p>
+            <?php endif; ?>
+            <input type="hidden" name="origem" value="<?= htmlspecialchars(basename($_SERVER['SCRIPT_NAME'])) ?>">
+            <div class="campo">NOME <input name="nome" type="text" placeholder="O seu nome" required></div>
             <div class="campo">EMPRESA <input name="empresa" type="text" placeholder="Nome da Empresa"></div>
-            <div class="campo">EMAIL <input name="email" type="email" placeholder="Email"></div>
+            <div class="campo">EMAIL <input name="email" type="email" placeholder="Email" required></div>
             <div class="campo">TELEFONE <input name="telefone" type="tel" placeholder="Telefone"></div>
             <div class="campo">
                 SETOR
@@ -57,6 +63,11 @@ document.getElementById('modal-orcamento').addEventListener('click', function(e)
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') fecharModal();
 });
+
+if (new URLSearchParams(window.location.search).has('orcamento')) {
+    document.getElementById('modal-orcamento').classList.add('aberto');
+    document.body.style.overflow = 'hidden';
+}
 
 function toggleNav() {
     document.querySelector('nav').classList.toggle('menu-aberto');
