@@ -32,7 +32,7 @@
             <a class="viti_alimentar" href="produtos.php#viti-alimentar">
                 <img src="../IMG_2143_viti.jpg" alt="imagem_vitivinicula">
                 <div class="mercado_texto">
-                    <h4>VITIVINÍCULA & ALIMENTAR</h4>
+                    <h4>VITIVINÍCOLA & ALIMENTAR</h4>
                     <p>Máquinas e soluções à medida para processos vitivinícolas e alimentares</p>
                 </div>
 
@@ -86,7 +86,7 @@
     <div class = "location">
         <div class = "texto">
         <h1> Localização </h1>
-        <p>A <strong>Baldaque & Vieira</strong>, Lda encontra-se estrategicamente localizada na freguesia de <strong>Paços de Brandão</strong>, no concelho de Santa Maria da Feira, integrando uma região industrial de excelência no <strong>norte de Portugal</strong>.
+        <p>A <strong>Baldaque & Vieira</strong>, Unipessoal, Lda encontra-se estrategicamente localizada na freguesia de <strong>Paços de Brandão</strong>, no concelho de Santa Maria da Feira, integrando uma região industrial de excelência no <strong>norte de Portugal</strong>.
         <br>Situada junto à Avenida do Portelo e Avenida Matoso, a fábrica possui excelentes ligações rodoviárias às principais vias do eixo Porto-Aveiro.</p>
     </div>
         <div class="mapa" id="mapaLocalizacao">
@@ -99,13 +99,13 @@
 <script>
 document.getElementById('mapaAceitar').addEventListener('click', function () {
     document.getElementById('mapaLocalizacao').innerHTML =
-        '<iframe src="https://www.google.com/maps?q=R.+2+Urbaniza%C3%A7%C3%A3o+Portela+39,+4535-516+Santa+Maria+da+Feira&output=embed" allowfullscreen loading="lazy"></iframe>';
+        '<iframe src="https://www.google.com/maps?q=Baldaque+%26+Vieira%2C+Pa%C3%A7os+de+Brand%C3%A3o&output=embed" allowfullscreen loading="lazy"></iframe>';
 });
 </script>
     </div>
     <div class ="orcamento"id="fale-conosco">
         <div class= "esquerda">
-        <p class="linha-topo">FALE CONOSCO</p>
+        <p class="linha-topo">FALE CONNOSCO</p>
         <h3> Peça o seu Orçamento</h3>
         <p> Descreva o equipamento ou serviço do qual quer receber mais informações<br>Responderemos o mais brevemente possível</p>
         <div class = "infos">
@@ -113,12 +113,16 @@ document.getElementById('mapaAceitar').addEventListener('click', function () {
             <p>TELEFONE</p>
             <p>22 099 1303</p>
         </div>
+        <div class="phone2">
+            <p>TELEMÓVEL</p>
+            <p>+351 918 228 054</p>
+        </div>
         <div class="email">
             <p>EMAIL</p>
             <p>geral@baldaque-e-vieira.pt</p>
         </div>
         <div class="localizacao">
-            <p>OFICINA</p>
+            <p>INSTALAÇÕES</p>
             <p>Zona Industrial - Santa Maria da Feira</p>
         </div>
 </div>

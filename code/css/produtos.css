@@ -42,10 +42,10 @@ body{
 
 .equipamentos h2{
     position: relative;
-    width: 1000%;
+    width: 100%;
     margin-top: 0;
     padding-bottom: 9px;
-    
+
 }
 
 .equipamentos h2::after {
@@ -126,7 +126,7 @@ body{
     line-height: 1.4;
 }
 
-#viti-alimentar, #corticeiro {
+#viti-alimentar, #corticeiro, #perimetro-seguranca {
     scroll-margin-top: 100px;
 }
 .viti {
@@ -174,13 +174,30 @@ body{
 }
 
 .viti-foto img {
-    
+
     max-height: 250px;
     width:auto;
     object-fit: contain;
     display: block;
     box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
-     
+
+}
+
+.viti-foto-legenda {
+    margin: 8px 0 0;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-ink-soft);
+}
+
+.viti-bloco:first-child .viti-foto-legenda {
+    text-align: left;
+}
+
+.viti-bloco:last-child .viti-foto-legenda {
+    text-align: right;
 }
 
 .viti-uvas {
@@ -336,6 +353,170 @@ body{
   background: var(--color-champagne);
 }
 
+.perimetro {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+.perimetro-texto {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.perimetro-texto p {
+    line-height: 1.7;
+    color: var(--color-ink-soft);
+    margin: 0 0 12px;
+}
+
+.perimetro-texto p:last-child {
+    margin-bottom: 0;
+}
+
+.perimetro-texto-esquerda {
+    text-align: right;
+}
+
+.perimetro-texto-direita {
+    text-align: left;
+}
+
+.perimetro-imagens {
+    flex: 0 0 400px;
+    width: 400px;
+    height: 460px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 4px;
+}
+
+.perimetro-caixa {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.perimetro-caixa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+}
+
+.perimetro-caixa::after {
+    background-color: color-mix(in srgb, var(--color-champagne) 55%, transparent);
+}
+
+.perimetro-grande {
+    grid-row: 1 / 3;
+    grid-column: 1;
+}
+
+.perimetro-pequena-cima {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.perimetro-pequena-baixo {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 10, 10, 0.97);
+    z-index: 2000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.lightbox-overlay.aberto {
+    display: flex;
+}
+
+.lightbox-imagem-wrap {
+    width: 100%;
+    max-width: 1100px;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-imagem-wrap img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.lightbox-fechar {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    font-size: 26px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+    z-index: 10;
+}
+
+.lightbox-fechar:hover {
+    background: var(--color-golden);
+}
+
+.lightbox-seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    font-size: 26px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+    z-index: 10;
+}
+
+.lightbox-seta:hover {
+    background: var(--color-golden);
+}
+
+.lightbox-seta-esq { left: 20px; }
+.lightbox-seta-dir { right: 20px; }
+
+.lightbox-legenda {
+    color: #f5f1e8;
+    font-size: 14px;
+    margin: 16px 0 4px;
+    text-align: center;
+}
+
 /* =========================
    RESPONSIVO
    ========================= */
@@ -363,6 +544,25 @@ body{
     width: 100%;
     margin-top: var(--space-m);
     box-sizing: border-box;
+  }
+  .perimetro{
+    flex-direction: column;
+    margin-bottom: var(--space-l);
+  }
+  .perimetro-texto{
+    flex: 0 0 auto;
+    max-width: 100%;
+  }
+  .perimetro-texto-esquerda,
+  .perimetro-texto-direita{
+    text-align: left;
+  }
+  .perimetro-imagens{
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 400 / 460;
   }
 }
 

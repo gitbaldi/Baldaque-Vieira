@@ -5,7 +5,7 @@
             <span></span><span></span><span></span>
         </button>
         <div class="direita">
-            <a href="home_page.php"> INICIO </a>
+            <a href="home_page.php"> INÍCIO </a>
             <a href="empresa.php"> EMPRESA </a>
             <a href="produtos.php"> PRODUTOS </a>
             <a href="home_page.php#fale-conosco"> CONTACTOS </a>
@@ -16,7 +16,7 @@
 <div class="modal-overlay" id="modal-orcamento">
     <div class="modal-conteudo">
         <button class="modal-fechar" onclick="fecharModal()">&times;</button>
-        <p class="linha-topo">FALE CONOSCO</p>
+        <p class="linha-topo">FALE CONNOSCO</p>
         <h3>Peça o seu Orçamento</h3>
         <p class="orcamento-desc">Descreva o equipamento ou serviço do qual quer receber mais informações.</p>
         <form>

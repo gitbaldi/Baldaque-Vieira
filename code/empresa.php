@@ -28,9 +28,9 @@
             <img src="../fabrica.jpeg" alt="Fábrica">
             <div class="f_dir">
               <h1> A nossa história </h1>
-            <p>  <strong>Fundada em 2012</strong> por Tiago Baldaque e José Vieira, tem como principal actividade o fabrico, manutenção e assistência técnica de máquinas industriais.</p>
-            <p>Desenvolve a sua actividade no concelho de <strong>Santa Maria da Feira</strong>, tendo o crescimento da carteira de encomendas despoletado a mudança para instalações de maior dimensão, transitando, no ano de 2014, de Rio Meão para a freguesia limítrofe de <strong>Paços de Brandão</strong>.</p>
-            <p>Atualmente, a actividade direcciona-se maioritariamente para empresas do sector corticeiro, vitivinícola e alimentar. O principal mercado de destino é o <strong>nacional</strong>, seguindo-se o comunitário, nomeadamente o francês e o espanhol.</p>
+            <p>  <strong>Fundada em 2012</strong> por Tiago Baldaque e José Vieira, tem como principal atividade o fabrico, manutenção e assistência técnica de máquinas industriais.</p>
+            <p>Desenvolve a sua atividade no concelho de <strong>Santa Maria da Feira</strong>, tendo o crescimento da carteira de encomendas despoletado a mudança para instalações de maior dimensão, transitando, no ano de 2014, de Rio Meão para a freguesia limítrofe de <strong>Paços de Brandão</strong>.</p>
+            <p>Atualmente, a atividade direciona-se maioritariamente para empresas do sector corticeiro, vitivinícola e alimentar. O principal mercado de destino é o <strong>nacional</strong>, seguindo-se o comunitário, nomeadamente o francês e o espanhol.</p>
             <a href ="produtos.php"> Conheça os nossos produtos </a>
             
           </div>
@@ -99,7 +99,7 @@ function resetEstado() {
    
     <div class="premio-texto">
         <h2>O que nos diferencia</h2>
-        <p>A Baldaque & Vieira aposta na personalização de serviços, objetivando que cada máquina não encontre um padrão de produção, mas sim uma adaptação a cada necessidade especifica dos clientes, de forma que o resultado final seja único e intransmissível.</p>
+        <p>A Baldaque & Vieira aposta na personalização de serviços, objetivando que cada máquina não encontre um padrão de produção, mas sim uma adaptação a cada necessidade específica dos clientes, de forma que o resultado final seja único e intransmissível.</p>
     </div>
     <div class="premio-barra"></div>
     <img src="../OneDrive_2026-06-23/Site - BeV/Logos/PME_Excelencia_2024/Logos-PME-Excelencia-2024/Imagens/logo_PME Excelencia_2024_cores_CMYK.png" alt="PME 2024">

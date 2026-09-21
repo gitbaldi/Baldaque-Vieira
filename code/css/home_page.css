@@ -530,14 +530,16 @@ padding-bottom: 12px;
 }
 
 .orcamento .phone,
+.orcamento .phone2,
 .orcamento .email,
 .orcamento .localizacao {
     padding-left: 0;
 }
 
-/* TELEFONE / EMAIL / OFICINA */
+/* TELEFONE / TELEMÓVEL / EMAIL / OFICINA */
 
 .orcamento .phone p:first-child,
+.orcamento .phone2 p:first-child,
 .orcamento .email p:first-child,
 .orcamento .localizacao p:first-child {
     color: var(--color-golden);
@@ -546,6 +548,7 @@ padding-bottom: 12px;
     letter-spacing: 0.5px;
 }
 .orcamento .phone p:nth-child(2),
+.orcamento .phone2 p:nth-child(2),
 .orcamento .email p:nth-child(2),
 .orcamento .localizacao p:nth-child(2) {
     margin: 0px;

@@ -16,7 +16,7 @@ footer {
 .footer_fim {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.5fr);
-    gap: var(--space-l); 
+    gap: var(--space-l);
     flex: 1;
 }
 
@@ -45,13 +45,18 @@ footer .servicos,
 footer .contactos {
     display: flex;
     flex-direction: column;
-    gap: 6px; 
+    gap: 8px; 
 }
 
 footer .contactos p {
     line-height: 1.5;
-    margin: 0;
+    margin: 5px 0;
 }
+
+footer .servicos p {
+    margin: 5px 0;
+}
+
 
 
 

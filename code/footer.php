@@ -8,23 +8,20 @@
     <div class="footer_fim">
 
         <div class = "empresa">
-            <span>EMPRESA</span>
-            <a href="empresa.php">Sobre nós</a>
-            <a href="about_us.php">Certificações</a>
-            <a href="about_us.php">Projetos</a>
+
         </div>
 
         <div class = "servicos">
             <span>SERVIÇOS</span>
-            <a href="about_us.php">Construção</a>
-            <a href="about_us.php">Manutenção</a>
-            <a href="about_us.php">Soldadura INOX</a>
-            <a href="about_us.php">Assistência</a>
+            <p>Construção</p>
+            <p>Manutenção</p>
+            <p>Soldadura INOX</p>
+            <p>Assistência</p>
         </div>
 
         <div class = "contactos">
             <span>CONTACTOS</span>
-            <p> R. 2 Urbanização Portela 39, 4535-516 Santa Maria da Feira <br> Portugal</p>
+            <p> Rua Dois das Brévias, nº 39, Zona Ind. Pousado - Lugar do Matoso, 4535-516 Paços de Brandão (SMF) <br> Portugal</p> <br>
             <p> +351 220 991 303</p>
             <p> geral@baldaque-e-vieira.pt</p>
         </div>
