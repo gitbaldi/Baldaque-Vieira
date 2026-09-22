@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/nav.css">
     
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/generic.css">
+    <link rel="stylesheet" href="css/generic.css?v=2">
     
     
         <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -64,7 +64,7 @@
   margin-right:16px;
 }
 .introducao button:first-of-type{background:var(--color-golden);color:white;}
-.introducao button:last-of-type{background:var(--color-champagne);border:1px solid var(--color-champagne);}
+.introducao button:last-of-type{background:var(--color-champagne);border:1px solid var(--color-champagne);color:#111;}
 
 /* fim do hero */
 

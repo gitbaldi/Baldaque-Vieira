@@ -26,18 +26,19 @@ $mensagem = trim($_POST['mensagem'] ?? '');
 
 $emailValido = filter_var($email, FILTER_VALIDATE_EMAIL);
 
-if ($nome === '' || !$emailValido) {
-    header('Location: ' . $origem . '?orcamento=erro#fale-conosco');
-    exit;
-}
-
 $setorLabels = [
     'corticeira' => 'Corticeira',
     'vitivinicola' => 'Vitivinícola',
     'alimentar' => 'Alimentar',
     'outra' => 'Outra',
 ];
-$setorTexto = $setorLabels[$setor] ?? 'Não especificado';
+
+if ($nome === '' || !$emailValido || $empresa === '' || $telefone === '' || $mensagem === '' || !isset($setorLabels[$setor])) {
+    header('Location: ' . $origem . '?orcamento=erro#fale-conosco');
+    exit;
+}
+
+$setorTexto = $setorLabels[$setor];
 
 $assunto = 'Novo pedido de orçamento - ' . $nome;
 

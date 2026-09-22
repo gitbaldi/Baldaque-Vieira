@@ -27,20 +27,20 @@
             <?php endif; ?>
             <input type="hidden" name="origem" value="<?= htmlspecialchars(basename($_SERVER['SCRIPT_NAME'])) ?>">
             <div class="campo">NOME <input name="nome" type="text" placeholder="O seu nome" required></div>
-            <div class="campo">EMPRESA <input name="empresa" type="text" placeholder="Nome da Empresa"></div>
+            <div class="campo">EMPRESA <input name="empresa" type="text" placeholder="Nome da Empresa" required></div>
             <div class="campo">EMAIL <input name="email" type="email" placeholder="Email" required></div>
-            <div class="campo">TELEFONE <input name="telefone" type="tel" placeholder="Telefone"></div>
+            <div class="campo">TELEFONE <input name="telefone" type="tel" placeholder="Telefone" required></div>
             <div class="campo">
                 SETOR
                 <div class="setor">
-                    <label><input type="radio" name="setor" value="corticeira"><span>CORTICEIRA</span></label>
-                    <label><input type="radio" name="setor" value="vitivinicola"><span>VITIVINÍCOLA</span></label>
-                    <label><input type="radio" name="setor" value="alimentar"><span>ALIMENTAR</span></label>
-                    <label><input type="radio" name="setor" value="outra"><span>OUTRA</span></label>
+                    <label><input type="radio" name="setor" value="corticeira" required><span>CORTICEIRA</span></label>
+                    <label><input type="radio" name="setor" value="vitivinicola" required><span>VITIVINÍCOLA</span></label>
+                    <label><input type="radio" name="setor" value="alimentar" required><span>ALIMENTAR</span></label>
+                    <label><input type="radio" name="setor" value="outra" required><span>OUTRA</span></label>
                 </div>
             </div>
             <div class="campo">MENSAGEM
-                <textarea name="mensagem" rows="3" placeholder="Descreva o equipamento ou serviço pretendido"></textarea>
+                <textarea name="mensagem" rows="3" placeholder="Descreva o equipamento ou serviço pretendido" required></textarea>
             </div>
             <input type="submit" value="ENVIAR PEDIDO">
         </form>

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-<link rel="stylesheet" href="css/home_page.css">
+<link rel="stylesheet" href="css/home_page.css?v=2">
 <?php $darkSections = '.introducao, .mercado_alvo, .equipamentos'; include 'nav.php'; ?>
 <div class="introducao">
         <img src="OneDrive_2026-06-23/Site - BeV/Fotos Site/BOA_IMG_5769.jpg"alt="maquina">
@@ -137,25 +137,25 @@ document.getElementById('mapaAceitar').addEventListener('click', function () {
             <input type="hidden" name="origem" value="home_page.php">
             <div class = "linha">
             <div class= "campo">NOME <input name="nome" type="text" placeholder="O seu nome" required></div>
-            <div class= "campo">EMPRESA <input name="empresa" type="text" placeholder="Nome da Empresa"></div>
+            <div class= "campo">EMPRESA <input name="empresa" type="text" placeholder="Nome da Empresa" required></div>
             </div>
             <div class = "linha">
             <div class= "campo">EMAIL <input name="email" type="email" placeholder="nome@empresa.pt" required></div>
-            <div class= "campo">TELEFONE <input name="telefone" type="tel" placeholder="+351..."> </div>
+            <div class= "campo">TELEFONE <input name="telefone" type="tel" placeholder="+351..." required> </div>
             </div>
             <div class="linha">
   <div class="campo">
     SETOR
     <div class="setor">
-      <label><input type="radio" name="setor" value="corticeira"><span>CORTICEIRA</span></label>
-      <label><input type="radio" name="setor" value="vitivinicula"><span>VITIVINÍCOLA</span></label>
-      <label><input type="radio" name="setor" value="alimentar"><span>ALIMENTAR</span></label>
-      <label><input type="radio" name="setor" value="outra"><span>OUTRA</span></label>
+      <label><input type="radio" name="setor" value="corticeira" required><span>CORTICEIRA</span></label>
+      <label><input type="radio" name="setor" value="vitivinicula" required><span>VITIVINÍCOLA</span></label>
+      <label><input type="radio" name="setor" value="alimentar" required><span>ALIMENTAR</span></label>
+      <label><input type="radio" name="setor" value="outra" required><span>OUTRA</span></label>
     </div>
   </div>
 </div>
-        <div class = "linha"> 
-            <div class= "campo">MENSAGEM <textarea name="mensagem" rows="5" cols="60" placeholder="Descreva o equipamento ou o serviço pretendido"></textarea>
+        <div class = "linha">
+            <div class= "campo">MENSAGEM <textarea name="mensagem" rows="5" cols="60" placeholder="Descreva o equipamento ou o serviço pretendido" required></textarea>
 </div></div>            
             <input type="submit" value="ENVIAR PEDIDO">
         </form>
