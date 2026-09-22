@@ -7,12 +7,7 @@ Website: [baldaque-e-vieira.pt](https://www.baldaque-e-vieira.pt/)
 
 ## Screenshots
 
-<img width="450"  alt="imagem incial" src="https://github.com/user-attachments/assets/9e34b1b5-d078-4d15-9841-8e52d1562e1e" />
-<img width="450"  alt="mercado alvo - home_page" src="https://github.com/user-attachments/assets/aceef7a9-4490-4627-be44-3fdbf89f292c" />
-
-
-<img width="450" alt="produtos corticeiro" src="https://github.com/user-attachments/assets/0d41b0bb-6820-4fcc-843e-c7cb0f19560c" />
-<img width="450" alt="formulário de contacto" src="https://github.com/user-attachments/assets/85e2668f-7e06-4195-9ad8-d591bf8da5a7" />
+<table> <tr> <td align="center"> <img width="350" alt="imagem inicial" src="https://github.com/user-attachments/assets/9e34b1b5-d078-4d15-9841-8e52d1562e1e" /><br><sub>Página inicial</sub> </td> <td align="center"> <img width="350" alt="mercado alvo - home_page" src="https://github.com/user-attachments/assets/aceef7a9-4490-4627-be44-3fdbf89f292c" /><br><sub>Secção "Mercado Alvo"</sub> </td> </tr> <tr> <td align="center"> <img width="350" alt="produtos corticeiro" src="https://github.com/user-attachments/assets/0d41b0bb-6820-4fcc-843e-c7cb0f19560c" /><br><sub>Catálogo de produtos</sub> </td> <td align="center"> <img width="350" alt="formulário de contacto" src="https://github.com/user-attachments/assets/85e2668f-7e06-4195-9ad8-d591bf8da5a7" /><br><sub>Formulário de orçamento</sub> </td> </tr> </table>
 
 ## Sobre o projeto
 
