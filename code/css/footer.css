@@ -15,7 +15,7 @@ footer {
 
 .footer_fim {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.5fr);
+    grid-template-columns: minmax(0, 0.6fr) minmax(0, 1fr) minmax(220px, 2fr);
     gap: var(--space-l);
     flex: 1;
 }
@@ -83,6 +83,9 @@ footer span {
     .footer_fim {
         grid-template-columns: 1fr 1fr;
         gap: var(--space-m);
+    }
+    footer .contactos {
+        grid-column: 1 / -1;
     }
 }
 

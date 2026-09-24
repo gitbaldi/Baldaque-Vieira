@@ -111,7 +111,7 @@ document.getElementById('mapaAceitar').addEventListener('click', function () {
         <div class = "infos">
         <div class="phone">
             <p>TELEFONE</p>
-            <p>22 099 1303</p>
+            <p>+351 22 099 1303</p>
         </div>
         <div class="phone2">
             <p>TELEMÓVEL</p>
